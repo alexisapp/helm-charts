@@ -79,7 +79,7 @@ spec:
               if [ ! "$(cat .seedhash)" = "${hashed_token}" ]; then
                 ./config.sh remove --token ${RUNNER_REGISTRATION_TOKEN}
                 ./config.sh \
-                    --name "${RUNNER_NAME}" \
+                    --name "${RUNNER_NAME}-${HOSTNAME}" \
                     --token "${RUNNER_REGISTRATION_TOKEN}" \
                     --url "https://github.com/${RUNNER_SCOPE}" \
                     --labels "${RUNNER_LABELS}" \

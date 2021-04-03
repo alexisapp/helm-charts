@@ -1,0 +1,13 @@
+{{ if .Values.server.enabled }}
+{{ if gt (int (toString (.Values.replicaCount))) 1 }}
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: "{{ .Release.Name }}-server-deployment-pdb"
+spec:
+  minAvailable: {{ .Values.server.pdb.minAvailable }}
+  selector:
+    matchLabels:
+      app: "{{  .Release.Name }}-server-selector"
+{{ end }}
+{{ end }}

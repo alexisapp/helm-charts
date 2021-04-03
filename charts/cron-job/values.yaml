@@ -1,0 +1,28 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+environment: "staging"
+
+config: env-config
+secrets: env-secrets
+
+concurrencyPolicy: Forbid
+successfulJobsHistoryLimit: 10
+
+image:
+  repository: eu.gcr.io/alexishr-infra/alexis-microservice
+  tag: master
+  pullPolicy: Always
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 1000Mi
+  requests:
+    cpu: 500m
+    memory: 500Mi
+
+volumes: []
+volumeMounts: []
+
+schedule: "0 * * * *"
+command: npm run replace-command

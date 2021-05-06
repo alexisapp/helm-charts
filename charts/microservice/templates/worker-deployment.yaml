@@ -8,10 +8,12 @@ metadata:
 spec:
   replicas: {{ .Values.worker.replicaCount }}
   strategy:
-    type: RollingUpdate
+    type: {{ .Values.worker.strategy.type }}
+{{ if eq .Values.worker.strategy.type "RollingUpdate" }}
     rollingUpdate:
-      maxUnavailable: 1
-      maxSurge: 1
+      maxUnavailable: {{ .Values.worker.strategy.rollingUpdate.maxUnavailable }}
+      maxSurge: {{ .Values.worker.strategy.rollingUpdate.maxSurge }}
+{{ end }}
   revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}
   selector:
     matchLabels:

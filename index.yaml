@@ -2,6 +2,14 @@ apiVersion: v1
 entries:
   cron-job:
   - apiVersion: v1
+    created: "2021-05-31T14:00:11.838387873Z"
+    description: cron-job
+    digest: ae4ed7d7806d935ab09f6409bb3c8ecdc5a6947739f7cdcdc63562490505af7c
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-1.0.1/cron-job-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
     created: "2021-04-03T18:35:57.126518016Z"
     description: cron-job
     digest: ad84f3b935bc995dc02c85ef5551a19bf6b08a157809e614cb4fd58738157011
@@ -36,13 +44,13 @@ entries:
     version: 0.10.1-1
   microservice:
   - apiVersion: v1
-    created: "2021-04-03T18:35:57.262066017Z"
+    created: "2021-05-06T14:15:25.12900794Z"
     description: microservice
-    digest: c17b2ac02e551e40271c9fa5ae53cb6756b4265a05d2d67f8b8776f6ab3fb2d2
+    digest: a4537ab3176e026132e05ebb62e649ef8d97922881636b0fcc077052954569fa
     name: microservice
     urls:
-    - https://github.com/alexisapp/helm-charts/releases/download/microservice-1.0.0/microservice-1.0.0.tgz
-    version: 1.0.0
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-1.0.2/microservice-1.0.2.tgz
+    version: 1.0.2
   - apiVersion: v1
     created: "2021-05-06T14:02:36.405321228Z"
     description: microservice
@@ -52,13 +60,13 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/microservice-1.0.1/microservice-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v1
-    created: "2021-05-06T14:15:25.12900794Z"
+    created: "2021-04-03T18:35:57.262066017Z"
     description: microservice
-    digest: a4537ab3176e026132e05ebb62e649ef8d97922881636b0fcc077052954569fa
+    digest: c17b2ac02e551e40271c9fa5ae53cb6756b4265a05d2d67f8b8776f6ab3fb2d2
     name: microservice
     urls:
-    - https://github.com/alexisapp/helm-charts/releases/download/microservice-1.0.2/microservice-1.0.2.tgz
-    version: 1.0.2
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-1.0.0/microservice-1.0.0.tgz
+    version: 1.0.0
   origin-ca-issuer:
   - apiVersion: v1
     appVersion: 0.5.1
@@ -76,4 +84,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/origin-ca-issuer-0.5.0/origin-ca-issuer-0.5.0.tgz
     version: 0.5.0
-generated: "2021-05-06T14:15:25.129031336Z"
+generated: "2021-05-31T14:00:11.838890696Z"

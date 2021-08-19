@@ -23,12 +23,14 @@ spec:
           affinity:
             podAntiAffinity:
               preferredDuringSchedulingIgnoredDuringExecution:
-                - labelSelector:
-                    matchExpressions:
-                      - key: app.kubernetes.io/processType
-                        operator: In
-                        values:
-                          - cron-job
+                - weight: 1
+                  podAffinityTerm:
+                    labelSelector:
+                      matchExpressions:
+                        - key: app.kubernetes.io/processType
+                          operator: In
+                          values:
+                            - cron-job
                   topologyKey: "kubernetes.io/hostname"
           containers:
             - name: {{ .Release.Name }}

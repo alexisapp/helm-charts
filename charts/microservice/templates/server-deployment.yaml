@@ -33,16 +33,18 @@ spec:
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                  - key: app
-                    operator: In
-                    values:
-                      - "{{ .Release.Name }}-server-selector"
-                  - key: app.kubernetes.io/processType
-                    operator: In
-                    values:
-                      - server
+            - weight: 1
+              podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                        - "{{ .Release.Name }}-server-selector"
+                    - key: app.kubernetes.io/processType
+                      operator: In
+                      values:
+                        - server
               topologyKey: "kubernetes.io/hostname"
 {{ end }}
       containers:

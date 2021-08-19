@@ -31,7 +31,7 @@ spec:
                           operator: In
                           values:
                             - cron-job
-                      topologyKey: "kubernetes.io/hostname"
+                    topologyKey: "kubernetes.io/hostname"
           containers:
             - name: {{ .Release.Name }}
               image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

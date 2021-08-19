@@ -20,18 +20,6 @@ spec:
           restartPolicy: "Never"
           nodeSelector:
             env: "{{ .Values.environment }}"
-          affinity:
-            podAntiAffinity:
-              preferredDuringSchedulingIgnoredDuringExecution:
-                - weight: 1
-                  podAffinityTerm:
-                    labelSelector:
-                      matchExpressions:
-                        - key: app.kubernetes.io/processType
-                          operator: In
-                          values:
-                            - cron-job
-                    topologyKey: "kubernetes.io/hostname"
           containers:
             - name: {{ .Release.Name }}
               image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

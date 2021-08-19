@@ -2,6 +2,14 @@ apiVersion: v1
 entries:
   cron-job:
   - apiVersion: v1
+    created: "2021-08-19T12:58:35.433433183Z"
+    description: cron-job
+    digest: abaeb5a810ec4dce08ee622351d27f656403aee6685fc8c17738ebd76686a0b3
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-1.0.5/cron-job-1.0.5.tgz
+    version: 1.0.5
+  - apiVersion: v1
     created: "2021-08-19T12:49:55.377104346Z"
     description: cron-job
     digest: edf83d3f7721e544998fb17474c6bb9d27d301d1af93d7e97de7c9daa2726277
@@ -68,6 +76,14 @@ entries:
     version: 0.10.1-1
   microservice:
   - apiVersion: v1
+    created: "2021-08-19T12:58:35.548905526Z"
+    description: microservice
+    digest: ce442d5136c548c5a8b5fafda818f235fc131c6c10d1f87fb54a017531268e39
+    name: microservice
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-1.0.6/microservice-1.0.6.tgz
+    version: 1.0.6
+  - apiVersion: v1
     created: "2021-08-19T12:49:55.507854833Z"
     description: microservice
     digest: afcef5f438af36597ed42b0316925f6b4c7798ec985db7d4f63280b8b963034d
@@ -132,4 +148,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/origin-ca-issuer-0.5.0/origin-ca-issuer-0.5.0.tgz
     version: 0.5.0
-generated: "2021-08-19T12:49:55.507890033Z"
+generated: "2021-08-19T12:58:35.54916063Z"

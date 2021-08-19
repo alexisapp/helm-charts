@@ -32,7 +32,7 @@ spec:
 {{ if gt (int (toString (.Values.worker.replicaCount))) 1 }}
       affinity:
         podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
+          preferredDuringSchedulingIgnoredDuringExecution:
             - labelSelector:
                 matchExpressions:
                   - key: app

@@ -22,7 +22,7 @@ spec:
             env: "{{ .Values.environment }}"
           affinity:
             podAntiAffinity:
-              requiredDuringSchedulingIgnoredDuringExecution:
+              preferredDuringSchedulingIgnoredDuringExecution:
                 - labelSelector:
                     matchExpressions:
                       - key: app.kubernetes.io/processType

@@ -45,7 +45,7 @@ spec:
                       operator: In
                       values:
                         - worker
-              topologyKey: "kubernetes.io/hostname"
+                  topologyKey: "kubernetes.io/hostname"
 {{ end }}
       containers:
       - name: "{{ .Release.Name  }}"

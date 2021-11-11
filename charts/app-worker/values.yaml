@@ -43,6 +43,7 @@ worker:
       cpu: 100m
       memory: 250Mi
   pdb:
+    enabled: true
     minAvailable: 1
   hpa:
     enabled: false

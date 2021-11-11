@@ -1,4 +1,4 @@
-{{ if .Values.worker.enabled }}
+{{ if .Values.worker.pdb.enabled }}
 {{ if gt (int (toString (.Values.worker.replicaCount))) 1 }}
 apiVersion: policy/v1beta1
 kind: PodDisruptionBudget

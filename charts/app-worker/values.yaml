@@ -6,8 +6,8 @@ containerPort: 4000
 
 environment: "staging"
 
-config: {}
-secrets: {}
+config: env-config
+secrets: env-secrets
 
 image:
   repository: eu.gcr.io/alexishr-infra/alexis-microservice

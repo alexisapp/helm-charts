@@ -57,9 +57,9 @@ spec:
             value : "worker"
         envFrom:
           - configMapRef:
-              name: "{{ .Release.Name }}-env-config"
+              name: "{{ .Values.config }}"
           - secretRef:
-              name: "{{ .Release.Name }}-env-secrets"
+              name: "{{ .Values.secrets }}"
         {{- if .Values.image.livenessProbe }}
         livenessProbe:
 {{ toYaml .Values.image.livenessProbe | indent 10 }}

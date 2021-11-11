@@ -1,0 +1,58 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 1
+revisionHistoryLimit: 10
+containerPort: 4000
+
+environment: "staging"
+
+config: {}
+secrets: {}
+
+image:
+  repository: eu.gcr.io/alexishr-infra/alexis-microservice
+  tag: master
+  pullPolicy: Always
+  readinessProbe:
+    httpGet:
+      path: /readiness
+      port: 4000
+    initialDelaySeconds: 5
+    periodSeconds: 5
+  livenessProbe:
+    httpGet:
+      path: /liveness
+      port: 4000
+    initialDelaySeconds: 30
+    periodSeconds: 10
+
+worker:
+  enabled: false
+  command: npm run worker
+  replicaCount: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  resources:
+    limits:
+      cpu: 300m
+      memory: 400Mi
+    requests:
+      cpu: 100m
+      memory: 250Mi
+  pdb:
+    minAvailable: 1
+  hpa:
+    enabled: false
+    minReplicas: 1
+    maxReplicas: 3
+    metrics:
+      cpu:
+        targetAverageUtilization: 70
+      memory:
+        targetAverageUtilization: 80
+
+volumes: []
+volumeMounts: []

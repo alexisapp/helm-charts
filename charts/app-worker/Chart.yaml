@@ -1,0 +1,4 @@
+apiVersion: v1
+description: app-worker
+name: app-worker
+version: 1.0.1

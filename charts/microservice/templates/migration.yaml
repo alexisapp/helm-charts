@@ -18,8 +18,6 @@ spec:
             app.kubernetes.io/processType: migration
         spec:
           restartPolicy: "Never"
-          nodeSelector:
-            env: "{{ .Values.environment }}"
           containers:
             - name: {{ .Release.Name }}
               image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

@@ -27,8 +27,6 @@ spec:
         checksum/config: {{ tpl (toYaml .Values.config) . | sha256sum }}
         checksum/secrets: {{ tpl (toYaml .Values.secrets) . | sha256sum }}
     spec:
-      nodeSelector:
-        env: "{{ .Values.environment }}"
       containers:
       - name: "{{ .Release.Name  }}"
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

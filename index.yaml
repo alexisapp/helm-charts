@@ -2,6 +2,14 @@ apiVersion: v1
 entries:
   app-worker:
   - apiVersion: v1
+    created: "2021-12-18T17:10:50.863935851Z"
+    description: app-worker
+    digest: 6441751a651cfe5d5fd148c724db95bd27595228a9ad60e42d42c868037c50a6
+    name: app-worker
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/app-worker-1.1.0-beta.0/app-worker-1.1.0-beta.0.tgz
+    version: 1.1.0-beta.0
+  - apiVersion: v1
     created: "2021-11-11T23:00:51.835677509Z"
     description: app-worker
     digest: df3f5ec3603f10fffe75309ac77f46ddf8166000b38912e4e7889e02f0bc57f9
@@ -18,6 +26,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/app-worker-1.0.0/app-worker-1.0.0.tgz
     version: 1.0.0
   cron-job:
+  - apiVersion: v1
+    created: "2021-12-18T17:10:51.012815004Z"
+    description: cron-job
+    digest: 3dad12306aff87e7b194edf2453ec78e0bc2d140630e4cdae5805690f6cc4d94
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-1.1.0-beta.0/cron-job-1.1.0-beta.0.tgz
+    version: 1.1.0-beta.0
   - apiVersion: v1
     created: "2021-08-19T13:15:36.896475666Z"
     description: cron-job
@@ -100,6 +116,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/github-actions-runner-0.10.1-1/github-actions-runner-0.10.1-1.tgz
     version: 0.10.1-1
   microservice:
+  - apiVersion: v1
+    created: "2021-12-18T17:10:51.161451886Z"
+    description: microservice
+    digest: 0ab1b5487e7c64498eb244caa979e2f98817bd97a6efdf68d39b1bbdf555c06f
+    name: microservice
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-1.1.0-beta.0/microservice-1.1.0-beta.0.tgz
+    version: 1.1.0-beta.0
   - apiVersion: v1
     created: "2021-12-17T15:15:25.700476371Z"
     description: microservice
@@ -189,4 +213,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/origin-ca-issuer-0.5.0/origin-ca-issuer-0.5.0.tgz
     version: 0.5.0
-generated: "2021-12-17T15:15:25.700852573Z"
+generated: "2021-12-18T17:10:51.161718463Z"

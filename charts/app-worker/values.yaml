@@ -28,6 +28,8 @@ image:
 
 worker:
   enabled: false
+  nodeSelector: false
+  spotTolerant: false
   command: npm run worker
   replicaCount: 1
   strategy:

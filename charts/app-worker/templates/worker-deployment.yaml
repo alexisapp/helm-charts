@@ -26,8 +26,15 @@ spec:
         checksum/config: {{ tpl (toYaml .Values.config) . | sha256sum }}
         checksum/secrets: {{ tpl (toYaml .Values.secrets) . | sha256sum }}
     spec:
+      {{ if .Values.worker.spotTolerant }}
+      tolerations:
+        - key: scheduling.cast.ai/spot
+          operator: Exists
+      {{ end }}
+      {{ if .Values.worker.nodeSelector }}
       nodeSelector:
-        env: "{{ .Values.environment }}"
+{{ toYaml .Values.worker.nodeSelector | indent 10 }}
+      {{ end }}
       containers:
       - name: "{{ .Release.Name  }}"
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

@@ -18,8 +18,15 @@ spec:
             app.kubernetes.io/processType: cron-job
         spec:
           restartPolicy: "Never"
+          {{ if .Values.spotTolerant }}
+          tolerations:
+            - key: scheduling.cast.ai/spot
+              operator: Exists
+          {{ end }}
+          {{ if .Values.nodeSelector }}
           nodeSelector:
-            env: "{{ .Values.environment }}"
+{{ toYaml .Values.nodeSelector | indent 12 }}
+          {{ end }}
           containers:
             - name: {{ .Release.Name }}
               image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

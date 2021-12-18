@@ -27,3 +27,6 @@ volumeMounts: []
 
 schedule: "0 * * * *"
 command: npm run replace-command
+
+spotTolerant: false
+nodeSelector: false

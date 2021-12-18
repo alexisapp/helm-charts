@@ -28,6 +28,7 @@ image:
 
 server:
   enabled: true
+  spotTolerant: false
   command: npm start
   strategy:
     type: RollingUpdate
@@ -55,6 +56,7 @@ server:
 
 worker:
   enabled: false
+  spotTolerant: false
   command: npm run worker
   replicaCount: 1
   strategy:

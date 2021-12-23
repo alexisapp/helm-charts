@@ -43,7 +43,10 @@ server:
       cpu: 150m
       memory: 250Mi
   pdb:
+    enabled: true
     minAvailable: 1
+  podAntiAffinity:
+    enabled: true
   hpa:
     enabled: false
     minReplicas: 1
@@ -72,7 +75,10 @@ worker:
       cpu: 100m
       memory: 250Mi
   pdb:
+    enabled: true
     minAvailable: 1
+  podAntiAffinity:
+    enabled: true
   hpa:
     enabled: false
     minReplicas: 1

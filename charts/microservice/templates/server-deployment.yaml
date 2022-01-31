@@ -40,7 +40,7 @@ spec:
 {{ if gt (int (toString (.Values.replicaCount))) 1 }}
       affinity:
         podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
+          preferredDuringSchedulingIgnoredDuringExecution:
             - podAffinityTerm:
                 labelSelector:
                   matchExpressions:

@@ -50,6 +50,15 @@ spec:
                         - "{{ .Release.Name }}-server-selector"
                 topologyKey: "kubernetes.io/hostname"
               weight: 100
+            - podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                        - "{{ .Release.Name }}-worker-selector"
+                topologyKey: "kubernetes.io/hostname"
+              weight: 100
 {{ end }}
 {{ end }}
       containers:

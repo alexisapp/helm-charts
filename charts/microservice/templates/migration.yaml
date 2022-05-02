@@ -28,9 +28,6 @@ spec:
                 - secretRef:
                     name: "{{  .Release.Name }}-env-secrets"
               command:
-              - "/bin/bash"
-              - "-c"
-              args:
               - "{{ .Values.migration.command }}"
               resources:
                 limits:

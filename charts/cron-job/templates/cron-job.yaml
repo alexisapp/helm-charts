@@ -40,10 +40,8 @@ spec:
                 - secretRef:
                     name: "{{ .Values.secrets }}"
               command:
-              - "/bin/bash"
-              - "-c"
-              args:
-              - "{{ .Values.command }}"
+                {{- range .Values.server.command }}
+                - {{ . }} {{- end}}
               {{ if .Values.volumeMounts }}
               volumeMounts:
 {{ toYaml .Values.volumeMounts | indent 14 }}

@@ -30,7 +30,10 @@ worker:
   enabled: false
   nodeSelector: false
   spotTolerant: false
-  command: npm run worker
+  command:
+   - npm
+   - run
+   - worker
   replicaCount: 1
   strategy:
     type: RollingUpdate

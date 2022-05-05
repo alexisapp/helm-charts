@@ -29,7 +29,9 @@ image:
 server:
   enabled: true
   spotTolerant: false
-  command: npm start
+  command:
+   - npm
+   - start
   strategy:
     type: RollingUpdate
     rollingUpdate:

@@ -2,6 +2,14 @@ apiVersion: v1
 entries:
   app-worker:
   - apiVersion: v1
+    created: "2022-05-05T10:10:05.35501371Z"
+    description: app-worker
+    digest: 75b0e7bd553c0d17b01c5998ddb1b41a6df178df955a371bae4fc584a1e4b63b
+    name: app-worker
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/app-worker-1.1.0-beta.1/app-worker-1.1.0-beta.1.tgz
+    version: 1.1.0-beta.1
+  - apiVersion: v1
     created: "2021-12-18T17:10:50.863935851Z"
     description: app-worker
     digest: 6441751a651cfe5d5fd148c724db95bd27595228a9ad60e42d42c868037c50a6
@@ -26,6 +34,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/app-worker-1.0.0/app-worker-1.0.0.tgz
     version: 1.0.0
   cron-job:
+  - apiVersion: v1
+    created: "2022-05-05T10:10:05.52161286Z"
+    description: cron-job
+    digest: b04af8c7262e60395c39a463ffd08ccf9901715c6ddca712ad9b51e9e87b3509
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-1.1.0-beta.1/cron-job-1.1.0-beta.1.tgz
+    version: 1.1.0-beta.1
   - apiVersion: v1
     created: "2021-12-18T17:10:51.012815004Z"
     description: cron-job
@@ -245,4 +261,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/origin-ca-issuer-0.5.0/origin-ca-issuer-0.5.0.tgz
     version: 0.5.0
-generated: "2022-05-03T16:15:59.249300511Z"
+generated: "2022-05-05T10:10:05.521750662Z"

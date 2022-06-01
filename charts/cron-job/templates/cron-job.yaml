@@ -40,7 +40,7 @@ spec:
                 - secretRef:
                     name: "{{ .Values.secrets }}"
               command:
-                {{- range .Values.server.command }}
+                {{- range .Values.command }}
                 - {{ . }} {{- end}}
               {{ if .Values.volumeMounts }}
               volumeMounts:

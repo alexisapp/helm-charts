@@ -141,6 +141,14 @@ entries:
     version: 0.10.1-1
   microservice:
   - apiVersion: v1
+    created: "2022-06-14T13:34:26.305904522Z"
+    description: microservice
+    digest: 1dbee4b257ee4b2350f6579aa6c59e3e34a626dc0ccfa1b6c022a31e794c55e2
+    name: microservice
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-1.1.0-beta.7/microservice-1.1.0-beta.7.tgz
+    version: 1.1.0-beta.7
+  - apiVersion: v1
     created: "2022-06-14T13:08:38.120701162Z"
     description: microservice
     digest: e9b4cb57ef36ccf89059c18a81dc73ee4fc5b0bf2780bfd944e0524ae88556ed
@@ -285,4 +293,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/origin-ca-issuer-0.5.0/origin-ca-issuer-0.5.0.tgz
     version: 0.5.0
-generated: "2022-06-14T13:08:38.120904395Z"
+generated: "2022-06-14T13:34:26.306283429Z"

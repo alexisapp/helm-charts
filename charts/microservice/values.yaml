@@ -61,7 +61,10 @@ server:
 worker:
   enabled: false
   spotTolerant: false
-  command: npm run worker
+  command: 
+   - npm
+   - run
+   - worker
   replicaCount: 1
   strategy:
     type: RollingUpdate
@@ -92,7 +95,10 @@ worker:
 
 migration:
   enabled: false
-  command: npm run migrate
+  command:
+   - npm
+   - run
+   - migrate
   schedule: "0 0 1 7 *"
   resources:
     limits:

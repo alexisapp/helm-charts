@@ -39,7 +39,6 @@ server:
       maxSurge: 1
   resources:
     limits:
-      cpu: 300m
       memory: 400Mi
     requests:
       cpu: 150m

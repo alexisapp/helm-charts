@@ -28,7 +28,9 @@ spec:
                 - secretRef:
                     name: "{{  .Release.Name }}-env-secrets"
               command:
-              - "{{ .Values.migration.command }}"
+              {{- range .Values.migration.command }}
+              - {{ . }} {{- end}}
+              {{ if .Values.volumeMounts }}
               resources:
                 limits:
                   cpu: "{{ .Values.migration.resources.limits.cpu }}"

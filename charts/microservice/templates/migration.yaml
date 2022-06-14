@@ -28,8 +28,8 @@ spec:
                 - secretRef:
                     name: "{{  .Release.Name }}-env-secrets"
               command:
-              {{- range .Values.migration.command }}
-              - {{ . }} {{- end}}
+                {{- range .Values.migration.command }}
+                - {{ . }} {{- end}}
               {{ if .Values.volumeMounts }}
               resources:
                 limits:

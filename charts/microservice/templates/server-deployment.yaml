@@ -67,7 +67,9 @@ spec:
         - containerPort: {{ .Values.containerPort}}
         resources:
           limits:
+            {{- if .Values.server.resources.limits.cpu }}
             cpu: "{{ .Values.server.resources.limits.cpu }}"
+            {{ end }}
             memory: "{{ .Values.server.resources.limits.memory }}"
           requests:
             cpu: "{{ .Values.server.resources.requests.cpu }}"

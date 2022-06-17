@@ -294,6 +294,22 @@ entries:
     version: 1.0.0
   origin-ca-issuer:
   - apiVersion: v1
+    appVersion: 0.6.1
+    created: "2022-06-17T13:13:03.954710128Z"
+    description: A Helm chart for origin-ca-issuer
+    digest: 469e4370538497d0e0e285b871319b2307088e405237ecf5a525eed811a20be6
+    home: https://github.com/cloudflare/origin-ca-issuer
+    keywords:
+    - cert-manager
+    - cloudflare
+    - tls
+    name: origin-ca-issuer
+    sources:
+    - https://github.com/cloudflare/origin-ca-issuer
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/origin-ca-issuer-0.6.1/origin-ca-issuer-0.6.1.tgz
+    version: 0.6.1
+  - apiVersion: v1
     appVersion: 0.5.1
     created: "2021-03-22T10:34:52.08852756Z"
     description: A Helm chart for origin-ca-issuer
@@ -309,4 +325,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/origin-ca-issuer-0.5.0/origin-ca-issuer-0.5.0.tgz
     version: 0.5.0
-generated: "2022-06-14T14:33:55.883070329Z"
+generated: "2022-06-17T13:13:03.955241637Z"

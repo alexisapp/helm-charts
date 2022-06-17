@@ -1,4 +1,4 @@
-# origin-ca-issuser
+# origin-ca-issuer
 
 origin-ca-issuer is a Kubernetes addon to automate issuance and renewals of Cloudflare Origin CA certificates with cert-manager.
 
@@ -12,7 +12,7 @@ origin-ca-issuer is a Kubernetes addon to automate issuance and renewals of Clou
 Before installing the chart, you must first install [cert-manager](https://cert-manager.io/docs/installation/), and the origin-ca-issuer CustomResourceDefinition resources.
 
 ```shell
-VERSION="v0.5.1"
+VERSION="v0.6.1"
 kubectl apply -f https://raw.githubusercontent.com/cloudflare/origin-ca-issuer/${VERSION}/deploy/crds/cert-manager.k8s.cloudflare.com_originissuers.yaml
 ```
 
@@ -22,7 +22,7 @@ To install the chart with the release name `my-release`:
 helm install --name my-release --namespace origin-ca-issuer .
 ```
 
-In order to begin issuer certificates from the Cloudflare Origin CA you will need to setup an OriginIssuer. For more information, see the [documentation])(https://github.com/cloudflare/origin-ca-issuer/blob/trunk/README.org).
+In order to begin issuer certificates from the Cloudflare Origin CA you will need to setup an OriginIssuer. For more information, see the [documentation](https://github.com/cloudflare/origin-ca-issuer/blob/trunk/README.org).
 
 ## Uninstalling the Chart
 
@@ -34,7 +34,7 @@ helm delete my-release
 If you want to completely uninstall origin-ca-issuer from your cluster, you also need to delete the previously installed CustomResourceDefinition resources:
 
 ``` shell
-VERSION="v0.5.1"
+VERSION="v0.6.1"
 kubectl delete -f https://raw.githubusercontent.com/cloudflare/origin-ca-issuer/${VERSION}/deploy/crds/cert-manager.k8s.cloudflare.com_originissuers.yaml
 ```
 
@@ -68,6 +68,7 @@ The following table lists the configurable parameters of the origin-ca-issuer ch
 | `controller.nodeSelector`             | Node labels for pod assignment                                                          | `{}`                             |
 | `controller.affinity`                 | Node (anti-)affinity for pod assignemt                                                  | `{}`                             |
 | `controller.tolerations`              | Node tolerations for pod assignment                                                     | `{}`                             |
+| `controller.disableApprovedCheck`     | Disable waiting for CertificateRequests to be Approved before signing                   | `false`                          |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 

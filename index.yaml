@@ -35,6 +35,14 @@ entries:
     version: 1.0.0
   cron-job:
   - apiVersion: v1
+    created: "2022-06-20T11:04:56.264009092Z"
+    description: cron-job
+    digest: ac30c9cf8af07f1ab67fef6c80cdd182bc92ad078be4026ee0a51cfcb762b03d
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-1.1.0-beta.4/cron-job-1.1.0-beta.4.tgz
+    version: 1.1.0-beta.4
+  - apiVersion: v1
     created: "2022-06-17T14:20:07.167590045Z"
     description: cron-job
     digest: 4b1537d22f210bda49773f2ef2c6c2e65ad69d0e1874588c059e535db2d4f189
@@ -341,4 +349,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/origin-ca-issuer-0.5.0/origin-ca-issuer-0.5.0.tgz
     version: 0.5.0
-generated: "2022-06-17T14:20:07.424186845Z"
+generated: "2022-06-20T11:04:56.264265894Z"

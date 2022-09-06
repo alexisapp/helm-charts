@@ -3,7 +3,7 @@ name: Release Charts
 on:
   push:
     branches:
-      - INF-476
+      - Update_probes
 
 jobs:
   release:

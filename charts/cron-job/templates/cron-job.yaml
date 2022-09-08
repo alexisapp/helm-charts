@@ -1,7 +1,7 @@
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: "{{ .Release.Name }}-cron-job"
+  name: "{{ .Release.Name }}-cj"
   labels:
     chart: '{{ .Release.Name }}-{{ .Chart.Version | replace "+" "_" }}'
 spec:

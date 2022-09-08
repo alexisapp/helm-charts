@@ -18,7 +18,7 @@ global:
 controller:
   image:
     repository: cloudflare/origin-ca-issuer
-    tag: v0.5.1
+    tag: v0.6.1
     pullPolicy: Always
 
   replicaCount: 1
@@ -30,6 +30,9 @@ controller:
   #       maxSurge: 0
   #       maxUnavailable: 1
   strategy: {}
+
+  # Disable waiting for CertificateRequests to be Approved before signing
+  disableApprovedCheck: false
 
   # Optional additional arguments
   extraArgs: []

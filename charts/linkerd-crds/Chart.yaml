@@ -12,5 +12,9 @@ maintainers:
 name: linkerd-crds
 sources:
 - https://github.com/linkerd/linkerd2/
+dependencies:
+- name: partials
+  version: 0.1.0
+  repository: file://../partials
 type: application
-version: 1.4.0
+version: 1.4.1

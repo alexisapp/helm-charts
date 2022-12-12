@@ -155,6 +155,27 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/github-actions-runner-0.10.1-1/github-actions-runner-0.10.1-1.tgz
     version: 0.10.1-1
+  linkerd-crds:
+  - apiVersion: v2
+    created: "2022-12-12T16:49:07.015816265Z"
+    description: 'Linkerd gives you observability, reliability, and security for your
+      microservices — with no code change required. '
+    digest: 447d51cefe1991a29319c95d1043ddbda078f643aa872c7272dd162a521978c3
+    home: https://linkerd.io
+    icon: https://linkerd.io/images/logo-only-200h.png
+    keywords:
+    - service-mesh
+    maintainers:
+    - email: cncf-linkerd-dev@lists.cncf.io
+      name: Linkerd authors
+      url: https://linkerd.io/
+    name: linkerd-crds
+    sources:
+    - https://github.com/linkerd/linkerd2/
+    type: application
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/linkerd-crds-1.4.0/linkerd-crds-1.4.0.tgz
+    version: 1.4.0
   microservice:
   - apiVersion: v1
     created: "2022-12-12T14:25:47.019379806Z"
@@ -365,4 +386,14 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/origin-ca-issuer-0.5.0/origin-ca-issuer-0.5.0.tgz
     version: 0.5.0
-generated: "2022-12-12T14:25:47.019733123Z"
+  partials:
+  - apiVersion: v1
+    created: "2022-12-12T16:49:07.21955516Z"
+    description: 'A Helm chart containing Linkerd partial templates, depended by the
+      ''linkerd'' and ''patch'' charts. '
+    digest: 1c7f53de5841f44b4cc3ff683c66d806717a608bfec267da1497e8cec3702162
+    name: partials
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/partials-0.1.0/partials-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-12-12T16:49:07.219961068Z"

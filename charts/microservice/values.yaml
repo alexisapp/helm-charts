@@ -8,6 +8,7 @@ environment: "staging"
 
 config: {}
 secrets: {}
+linkerd: false
 
 image:
   repository: eu.gcr.io/alexishr-infra/alexis-microservice
@@ -61,7 +62,7 @@ server:
 worker:
   enabled: false
   spotTolerant: false
-  command: 
+  command:
    - npm
    - run
    - worker

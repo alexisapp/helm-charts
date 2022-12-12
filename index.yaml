@@ -157,6 +157,30 @@ entries:
     version: 0.10.1-1
   linkerd-crds:
   - apiVersion: v2
+    created: "2022-12-12T17:15:52.175046747Z"
+    dependencies:
+    - name: partials
+      repository: file://../partials
+      version: 0.1.0
+    description: 'Linkerd gives you observability, reliability, and security for your
+      microservices — with no code change required. '
+    digest: dc7ed229f27ee081ed914d409cdcabc4e142423a5661c99603fc7f2252200720
+    home: https://linkerd.io
+    icon: https://linkerd.io/images/logo-only-200h.png
+    keywords:
+    - service-mesh
+    maintainers:
+    - email: cncf-linkerd-dev@lists.cncf.io
+      name: Linkerd authors
+      url: https://linkerd.io/
+    name: linkerd-crds
+    sources:
+    - https://github.com/linkerd/linkerd2/
+    type: application
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/linkerd-crds-1.4.1/linkerd-crds-1.4.1.tgz
+    version: 1.4.1
+  - apiVersion: v2
     created: "2022-12-12T16:49:07.015816265Z"
     description: 'Linkerd gives you observability, reliability, and security for your
       microservices — with no code change required. '
@@ -396,4 +420,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/partials-0.1.0/partials-0.1.0.tgz
     version: 0.1.0
-generated: "2022-12-12T16:49:07.219961068Z"
+generated: "2022-12-12T17:15:52.175299646Z"

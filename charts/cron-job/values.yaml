@@ -7,7 +7,7 @@ secrets: env-secrets
 
 concurrencyPolicy: Forbid
 startingDeadlineSeconds: 200
-successfulJobsHistoryLimit: 10
+successfulJobsHistoryLimit: 3
 
 image:
   repository: eu.gcr.io/alexishr-infra/alexis-microservice

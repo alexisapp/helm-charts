@@ -3,7 +3,7 @@ name: Release Charts
 on:
   push:
     branches:
-      - INF-664
+      - main
 
 jobs:
   release:

@@ -3,7 +3,7 @@ name: Release Charts
 on:
   push:
     branches:
-      - main
+      - PE-150
 
 jobs:
   release:

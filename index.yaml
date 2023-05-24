@@ -2,6 +2,14 @@ apiVersion: v1
 entries:
   app-worker:
   - apiVersion: v1
+    created: "2023-05-24T12:39:38.241280381Z"
+    description: app-worker
+    digest: fa65d5247d4489e016f3092128cc7a05aa7f2e5d7667009affd7923ce4342e1a
+    name: app-worker
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/app-worker-2.0.0-alpha.1/app-worker-2.0.0-alpha.1.tgz
+    version: 2.0.0-alpha.1
+  - apiVersion: v1
     created: "2022-05-05T10:10:05.35501371Z"
     description: app-worker
     digest: 75b0e7bd553c0d17b01c5998ddb1b41a6df178df955a371bae4fc584a1e4b63b
@@ -34,6 +42,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/app-worker-1.0.0/app-worker-1.0.0.tgz
     version: 1.0.0
   cron-job:
+  - apiVersion: v1
+    created: "2023-05-24T12:39:38.685244436Z"
+    description: cron-job
+    digest: f631ef603f048f25596a4eae84ddbd07c27b3213f288cf5eadd22eff9a7d6a31
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-2.0.0-alpha.1/cron-job-2.0.0-alpha.1.tgz
+    version: 2.0.0-alpha.1
   - apiVersion: v1
     created: "2023-01-03T10:32:56.857702796Z"
     description: cron-job
@@ -217,6 +233,14 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/microservice-2.0.0-alpha1/microservice-2.0.0-alpha1.tgz
     version: 2.0.0-alpha1
+  - apiVersion: v1
+    created: "2023-05-24T12:39:38.917229001Z"
+    description: microservice
+    digest: e3ac9e389bc7e00ac4d912d230d5391fc4befad0752598054d6e4c8b5ee8303c
+    name: microservice
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-2.0.0-alpha.2/microservice-2.0.0-alpha.2.tgz
+    version: 2.0.0-alpha.2
   - apiVersion: v1
     created: "2022-12-12T14:25:47.019379806Z"
     description: microservice
@@ -436,4 +460,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/partials-0.1.0/partials-0.1.0.tgz
     version: 0.1.0
-generated: "2023-05-03T13:23:56.282906729Z"
+generated: "2023-05-24T12:39:38.917714503Z"

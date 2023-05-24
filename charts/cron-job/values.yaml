@@ -2,8 +2,8 @@
 # Declare variables to be passed into your templates.
 environment: "staging"
 
-config: env-config
-secrets: env-secrets
+# config: env-config
+# secrets: env-secrets
 
 concurrencyPolicy: Forbid
 startingDeadlineSeconds: 200
@@ -27,8 +27,8 @@ volumeMounts: []
 
 schedule: "0 * * * *"
 command:
- - npm
- - run
+ - sh
+ - entrypoint.sh
  - replace-command
 
 spotTolerant: false

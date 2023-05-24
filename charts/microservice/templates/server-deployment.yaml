@@ -24,8 +24,8 @@ spec:
         app: "{{  .Release.Name }}-server-selector"
         app.kubernetes.io/processType: server
       annotations:
-        checksum/config: {{ tpl (toYaml .Values.config) . | sha256sum }}
-        checksum/secrets: {{ tpl (toYaml .Values.secrets) . | sha256sum }}
+        # checksum/config: {{ tpl (toYaml .Values.config) . | sha256sum }}
+        # checksum/secrets: {{ tpl (toYaml .Values.secrets) . | sha256sum }}
         {{- if eq true .Values.linkerd }}
         linkerd.io/inject: enabled
         {{ end }}

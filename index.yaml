@@ -234,6 +234,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/microservice-2.0.0-alpha1/microservice-2.0.0-alpha1.tgz
     version: 2.0.0-alpha1
   - apiVersion: v1
+    created: "2023-06-13T17:56:22.32220832Z"
+    description: microservice
+    digest: 542d1ab972b1a7696edbe502552cf70f26c2c35003f89a59237a69205189eef0
+    name: microservice
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-2.0.0-alpha.3/microservice-2.0.0-alpha.3.tgz
+    version: 2.0.0-alpha.3
+  - apiVersion: v1
     created: "2023-05-24T12:39:38.917229001Z"
     description: microservice
     digest: e3ac9e389bc7e00ac4d912d230d5391fc4befad0752598054d6e4c8b5ee8303c
@@ -460,4 +468,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/partials-0.1.0/partials-0.1.0.tgz
     version: 0.1.0
-generated: "2023-05-24T12:39:38.917714503Z"
+generated: "2023-06-13T17:56:22.322874824Z"

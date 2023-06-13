@@ -12,6 +12,8 @@ vaultRole: {}
 appNamespace: {}
 appName: {}
 appCommand: {}
+appWorkerCommand: {}
+appMigrationCommand: {}
 
 config: {}
 secrets: {}

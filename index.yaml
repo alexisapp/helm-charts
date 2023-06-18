@@ -2,6 +2,14 @@ apiVersion: v1
 entries:
   app-worker:
   - apiVersion: v1
+    created: "2023-06-18T13:29:08.747869723Z"
+    description: app-worker
+    digest: e7d8c6ae044330df2b98db3b21729c7f3186660acf357899e5ce5519dadf04d5
+    name: app-worker
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/app-worker-2.0.0-alpha.2/app-worker-2.0.0-alpha.2.tgz
+    version: 2.0.0-alpha.2
+  - apiVersion: v1
     created: "2023-05-24T12:39:38.241280381Z"
     description: app-worker
     digest: fa65d5247d4489e016f3092128cc7a05aa7f2e5d7667009affd7923ce4342e1a
@@ -42,6 +50,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/app-worker-1.0.0/app-worker-1.0.0.tgz
     version: 1.0.0
   cron-job:
+  - apiVersion: v1
+    created: "2023-06-18T13:29:08.906263598Z"
+    description: cron-job
+    digest: cc77bf8098a8140dc838097cae7c22c0b37d2dd73bc88217f0c0b824a930e130
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-2.0.0-alpha.2/cron-job-2.0.0-alpha.2.tgz
+    version: 2.0.0-alpha.2
   - apiVersion: v1
     created: "2023-05-24T12:39:38.685244436Z"
     description: cron-job
@@ -468,4 +484,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/partials-0.1.0/partials-0.1.0.tgz
     version: 0.1.0
-generated: "2023-06-13T17:56:22.322874824Z"
+generated: "2023-06-18T13:29:08.906583115Z"

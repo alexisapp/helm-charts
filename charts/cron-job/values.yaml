@@ -29,7 +29,6 @@ schedule: "0 * * * *"
 command:
  - sh
  - entrypoint.sh
- - replace-command
 
 spotTolerant: false
 nodeSelector: false

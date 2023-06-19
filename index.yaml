@@ -2,6 +2,14 @@ apiVersion: v1
 entries:
   app-worker:
   - apiVersion: v1
+    created: "2023-06-19T08:37:36.353371888Z"
+    description: app-worker
+    digest: 7347132116be9ba51b959c38aa2af62e6e8e7498afc404ccf695f56243f35824
+    name: app-worker
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/app-worker-2.0.0-alpha.4/app-worker-2.0.0-alpha.4.tgz
+    version: 2.0.0-alpha.4
+  - apiVersion: v1
     created: "2023-06-19T08:00:52.246638796Z"
     description: app-worker
     digest: 0aa9982433d00f7397926fddc2a5748fa95d80d22e5f886bd878a3c708a0d53e
@@ -508,4 +516,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/partials-0.1.0/partials-0.1.0.tgz
     version: 0.1.0
-generated: "2023-06-19T08:00:52.564545733Z"
+generated: "2023-06-19T08:37:36.353824592Z"

@@ -65,10 +65,10 @@ spec:
             value : "{{ .Values.containerPort }}"
           - name: PROCESS_TYPE
             value : "worker"
-          # - name: VAULT_ADDR
-          #   value : "{{ .Values.vaultArddr }}"
-          - name: VAULT_TOKEN
-            value : "{{ .Values.vaultToken }}"
+          - name: VAULT_ADDR
+            value : "{{ .Values.vaultArddr }}"
+          # - name: VAULT_TOKEN
+          #   value : "{{ .Values.vaultToken }}"
           - name: VAULT_ROLE_NAME
             value : "{{ .Values.vaultRole }}"                    
           - name: NAMESPACE

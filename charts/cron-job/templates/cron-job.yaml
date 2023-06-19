@@ -31,11 +31,16 @@ spec:
             - name: {{ .Release.Name }}
               image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
               imagePullPolicy: {{ .Values.image.pullPolicy }}
+              envFrom:
+                - configMapRef:
+                    name: "{{ .Values.config }}"
+                - secretRef:
+                    name: "{{ .Values.secrets }}"              
               env:
                 - name: VAULT_ADDR
                   value : "{{ .Values.vaultArddr }}"
-                - name: VAULT_TOKEN
-                  value : "{{ .Values.vaultToken }}"
+                # - name: VAULT_TOKEN
+                #   value : "{{ .Values.vaultToken }}"
                 - name: VAULT_ROLE_NAME
                   value : "{{ .Values.vaultRole }}"                    
                 - name: NAMESPACE

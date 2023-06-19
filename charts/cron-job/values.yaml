@@ -28,7 +28,7 @@ volumeMounts: []
 schedule: "0 * * * *"
 command:
  - sh
- - entrypoint.sh
+ - /entrypoint.sh
 
 spotTolerant: false
 nodeSelector: false

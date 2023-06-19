@@ -24,8 +24,8 @@ spec:
         app: "{{  .Release.Name }}-server-selector"
         app.kubernetes.io/processType: server
       annotations:
-        # checksum/config: {{ tpl (toYaml .Values.config) . | sha256sum }}
-        # checksum/secrets: {{ tpl (toYaml .Values.secrets) . | sha256sum }}
+        checksum/config: {{ tpl (toYaml .Values.config) . | sha256sum }}
+        checksum/secrets: {{ tpl (toYaml .Values.secrets) . | sha256sum }}
         {{- if eq true .Values.linkerd }}
         linkerd.io/inject: enabled
         {{ end }}
@@ -84,8 +84,8 @@ spec:
             value : "server"
           - name: VAULT_ADDR
             value : "{{ .Values.vaultArddr }}"
-          - name: VAULT_TOKEN
-            value : "{{ .Values.vaultToken }}"
+          # - name: VAULT_TOKEN
+          #   value : "{{ .Values.vaultToken }}"
           - name: VAULT_ROLE_NAME
             value : "{{ .Values.vaultRole }}"                    
           - name: NAMESPACE
@@ -94,11 +94,11 @@ spec:
             value : "{{ .Values.appName }}"
           - name: COMMAND
             value : "{{ .Values.appCommand }}"  
-        # envFrom:
-        #   - configMapRef:
-        #       name: "{{ .Release.Name }}-env-config"
-        #   - secretRef:
-        #       name: "{{ .Release.Name }}-env-secrets"
+        envFrom:
+          - configMapRef:
+              name: "{{ .Release.Name }}-env-config"
+          - secretRef:
+              name: "{{ .Release.Name }}-env-secrets"
         {{- if .Values.livenessProbe }}
         livenessProbe:
 {{ toYaml .Values.livenessProbe | indent 10 }}
@@ -114,20 +114,20 @@ spec:
 {{ end }}
 
 ---
-# apiVersion: v1
-# kind: ConfigMap
-# metadata:
-#   name: "{{  .Release.Name }}-env-config"
-# data:
-# {{ toYaml .Values.config | indent 2 }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "{{  .Release.Name }}-env-config"
+data:
+{{ toYaml .Values.config | indent 2 }}
 
-# ---
-# apiVersion: v1
-# kind: Secret
-# metadata:
-#   name: "{{ .Release.Name }}-env-secrets"
-# type: Opaque
-# data:
-# {{ toYaml .Values.secrets | indent 2 }}
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: "{{ .Release.Name }}-env-secrets"
+type: Opaque
+data:
+{{ toYaml .Values.secrets | indent 2 }}
 
-# ---
+---

@@ -33,8 +33,7 @@ worker:
   spotTolerant: false
   command:
    - sh
-   - entrypoint.sh
-   - npm run worker
+   - /entrypoint.sh
   replicaCount: 1
   strategy:
     type: RollingUpdate

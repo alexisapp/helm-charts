@@ -22,9 +22,9 @@ spec:
       labels:
         app: "{{ .Release.Name }}-worker-selector"
         app.kubernetes.io/processType: worker
-      # annotations:
-      #   checksum/config: {{ tpl (toYaml .Values.config) . | sha256sum }}
-      #   checksum/secrets: {{ tpl (toYaml .Values.secrets) . | sha256sum }}
+      annotations:
+        checksum/config: {{ tpl (toYaml .Values.config) . | sha256sum }}
+        checksum/secrets: {{ tpl (toYaml .Values.secrets) . | sha256sum }}
     spec:
       {{ if .Values.worker.spotTolerant }}
       tolerations:
@@ -55,13 +55,18 @@ spec:
           requests:
             cpu: "{{ .Values.worker.resources.requests.cpu }}"
             memory: "{{ .Values.worker.resources.requests.memory }}"
+        envFrom:
+          - configMapRef:
+              name: "{{ .Values.config }}"
+          - secretRef:
+              name: "{{ .Values.secrets }}"
         env:
           - name: WORKER_PORT
             value : "{{ .Values.containerPort }}"
           - name: PROCESS_TYPE
             value : "worker"
-          - name: VAULT_ADDR
-            value : "{{ .Values.vaultArddr }}"
+          # - name: VAULT_ADDR
+          #   value : "{{ .Values.vaultArddr }}"
           - name: VAULT_TOKEN
             value : "{{ .Values.vaultToken }}"
           - name: VAULT_ROLE_NAME

@@ -24,8 +24,8 @@ spec:
         app: "{{ .Release.Name }}-worker-selector"
         app.kubernetes.io/processType: worker
       annotations:
-        # checksum/config: {{ tpl (toYaml .Values.config) . | sha256sum }}
-        # checksum/secrets: {{ tpl (toYaml .Values.secrets) . | sha256sum }}
+        checksum/config: {{ tpl (toYaml .Values.config) . | sha256sum }}
+        checksum/secrets: {{ tpl (toYaml .Values.secrets) . | sha256sum }}
         {{- if eq true .Values.linkerd }}
         linkerd.io/inject: enabled
         {{ end }}
@@ -101,11 +101,11 @@ spec:
             value : "{{ .Values.appName }}"
           - name: COMMAND
             value : "{{ .Values.appWorkerCommand }}"
-        # envFrom:
-        #   - configMapRef:
-        #       name: "{{ .Release.Name }}-env-config"
-        #   - secretRef:
-        #       name: "{{ .Release.Name }}-env-secrets"
+        envFrom:
+          - configMapRef:
+              name: "{{ .Release.Name }}-env-config"
+          - secretRef:
+              name: "{{ .Release.Name }}-env-secrets"
         {{- if .Values.livenessProbe }}
         livenessProbe:
 {{ toYaml .Values.livenessProbe | indent 10 }}

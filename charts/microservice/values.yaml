@@ -42,7 +42,7 @@ server:
   spotTolerant: false
   command:
    - sh
-   - entrypoint.sh
+   - /entrypoint.sh
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -74,7 +74,7 @@ worker:
   spotTolerant: false
   command:
    - sh
-   - entrypoint.sh
+   - /entrypoint.sh
   replicaCount: 1
   strategy:
     type: RollingUpdate
@@ -107,7 +107,7 @@ migration:
   enabled: false
   command:
    - sh
-   - entrypoint.sh
+   - /entrypoint.sh
   schedule: "0 0 1 7 *"
   resources:
     limits:

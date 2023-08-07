@@ -67,6 +67,14 @@ entries:
     version: 1.0.0
   cron-job:
   - apiVersion: v1
+    created: "2023-08-07T17:55:38.375132033Z"
+    description: cron-job
+    digest: 3618980922556a93b95d433733fff3fbc959ee9408557d37c32c8d4cacce0441
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-2.0.0-alpha.4/cron-job-2.0.0-alpha.4.tgz
+    version: 2.0.0-alpha.4
+  - apiVersion: v1
     created: "2023-06-19T08:00:52.407076134Z"
     description: cron-job
     digest: b88d7a1406ba9124a651702dd4e8a7df48bf8b1dc82931eb2cfb8b84c638cfb5
@@ -524,4 +532,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/partials-0.1.0/partials-0.1.0.tgz
     version: 0.1.0
-generated: "2023-06-19T09:31:40.018663914Z"
+generated: "2023-08-07T17:55:38.375778936Z"

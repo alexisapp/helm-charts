@@ -7,7 +7,7 @@ kind: CronJob
 metadata:
   name: "{{ $cronjob.id }}"
   labels:
-    chart: '{{ $cronjob.id }}-{{ .Chart.Version | replace "+" "_" }}'
+    cronjob: '{{ $cronjob.id }}'
 spec:
   schedule: "{{ .Values.schedule }}"
   concurrencyPolicy: {{ .Values.concurrencyPolicy }}

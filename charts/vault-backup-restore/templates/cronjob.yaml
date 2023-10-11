@@ -46,6 +46,7 @@ spec:
                   value : "{{ $.Values.vault.addr.primary }}"                    
                 - name: GCS_BUCKET
                   value : "{{ $.Values.vault.gscBucket }}"
+              {{- if .Values.volumes }}
               volumeMounts:
 {{ toYaml $.Values.volumeMounts | indent 14 }}
               {{ end }}

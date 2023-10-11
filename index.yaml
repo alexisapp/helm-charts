@@ -590,6 +590,14 @@ entries:
     version: 0.1.0
   vault-backup-restore:
   - apiVersion: v1
+    created: "2023-10-11T18:20:38.031234208Z"
+    description: cron-job
+    digest: be507c84596c40d31af5d13fdd64c35d7948286917c1f008a68da52b4b3df886
+    name: vault-backup-restore
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.2/vault-backup-restore-0.1.0-beta.2.tgz
+    version: 0.1.0-beta.2
+  - apiVersion: v1
     created: "2023-10-11T18:01:24.780240901Z"
     description: cron-job
     digest: 0b1c724845beac627600fd32e23be007919c7feb3e8bfda1c3e5e07ff0f386af
@@ -597,4 +605,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2023-10-11T18:01:24.781011508Z"
+generated: "2023-10-11T18:20:38.032142218Z"

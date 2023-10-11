@@ -30,6 +30,8 @@ volumeMounts:
 
 secrets: backup-secrets
 
+serviceaccount: backup
+
 vault:
   backup: "true"
   restore: "false"

@@ -18,6 +18,7 @@ spec:
             app.kubernetes.io/processType: cron-job
         spec:
           restartPolicy: "Never"
+          serviceAccountName: {{ $.Values.serviceaccount }}
           {{ if $.Values.spotTolerant }}
           tolerations:
             - key: scheduling.cast.ai/spot

@@ -1,14 +1,14 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: "{{ lower $cronjob.id }}"
+  name: "{{ .Release.Name }}"
   labels:
-    cronjob: "{{ $cronjob.id }}"
+    cronjob: "{{ .Release.Name }}"
 spec:
-  schedule: "{{ $cronjob.schedule | default $.Values.schedule }}"
-  concurrencyPolicy: {{ $cronjob.concurrencyPolicy | default $.Values.concurrencyPolicy }}
-  startingDeadlineSeconds: {{ $cronjob.startingDeadlineSeconds | default $.Values.startingDeadlineSeconds }}
-  successfulJobsHistoryLimit: {{ $cronjob.successfulJobsHistoryLimit | default $.Values.successfulJobsHistoryLimit }}
+  schedule: "{{ $.Values.schedule }}"
+  concurrencyPolicy: {{ $.Values.concurrencyPolicy }}
+  startingDeadlineSeconds: {{ $.Values.startingDeadlineSeconds }}
+  successfulJobsHistoryLimit: {{ $.Values.successfulJobsHistoryLimit }}
   jobTemplate:
     spec:
       backoffLimit: 3
@@ -29,7 +29,7 @@ spec:
 {{ toYaml $.Values.nodeSelector | indent 12 }}
           {{ end }}
           containers:
-            - name: {{ lower $cronjob.id }}
+            - name: {{ .Release.Name }}
               image: "{{ $.Values.image.repository }}:{{ $.Values.image.tag }}"
               imagePullPolicy: {{ $.Values.image.pullPolicy }}
               envFrom:
@@ -51,11 +51,11 @@ spec:
               {{ end }}
               resources:
                 limits:
-                  cpu: "{{ $cronjob.limits_cpu | default $.Values.resources.limits.cpu }}"
-                  memory: "{{ $cronjob.limits_cpu | default $.Values.resources.limits.memory }}"
+                  cpu: "{{ $.Values.resources.limits.cpu }}"
+                  memory: "{{ $.Values.resources.limits.memory }}"
                 requests:
-                  cpu: "{{ $cronjob.limits_cpu | default $.Values.resources.requests.cpu }}"
-                  memory: "{{ $cronjob.limits_cpu | default $.Values.resources.requests.memory }}"
+                  cpu: "{{ $.Values.resources.requests.cpu }}"
+                  memory: "{{ $.Values.resources.requests.memory }}"
           {{- if $.Values.volumes }}
           volumes:
 {{ toYaml $.Values.volumes | indent 10 }}

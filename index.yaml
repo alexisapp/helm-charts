@@ -588,4 +588,13 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/partials-0.1.0/partials-0.1.0.tgz
     version: 0.1.0
-generated: "2023-09-22T14:10:27.992298258Z"
+  vault-backup-restore:
+  - apiVersion: v1
+    created: "2023-10-11T18:01:24.780240901Z"
+    description: cron-job
+    digest: 0b1c724845beac627600fd32e23be007919c7feb3e8bfda1c3e5e07ff0f386af
+    name: vault-backup-restore
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
+    version: 0.1.0-beta.1
+generated: "2023-10-11T18:01:24.781011508Z"

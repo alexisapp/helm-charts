@@ -1,0 +1,61 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: "{{ lower $cronjob.id }}"
+  labels:
+    cronjob: "{{ $cronjob.id }}"
+spec:
+  schedule: "{{ $cronjob.schedule | default $.Values.schedule }}"
+  concurrencyPolicy: {{ $cronjob.concurrencyPolicy | default $.Values.concurrencyPolicy }}
+  startingDeadlineSeconds: {{ $cronjob.startingDeadlineSeconds | default $.Values.startingDeadlineSeconds }}
+  successfulJobsHistoryLimit: {{ $cronjob.successfulJobsHistoryLimit | default $.Values.successfulJobsHistoryLimit }}
+  jobTemplate:
+    spec:
+      backoffLimit: 3
+      template:
+        metadata:
+          labels:
+            app.kubernetes.io/processType: cron-job
+        spec:
+          restartPolicy: "Never"
+          {{ if $.Values.spotTolerant }}
+          tolerations:
+            - key: scheduling.cast.ai/spot
+              operator: Exists
+          {{ end }}
+          {{ if $.Values.nodeSelector }}
+          nodeSelector:
+{{ toYaml $.Values.nodeSelector | indent 12 }}
+          {{ end }}
+          containers:
+            - name: {{ lower $cronjob.id }}
+              image: "{{ $.Values.image.repository }}:{{ $.Values.image.tag }}"
+              imagePullPolicy: {{ $.Values.image.pullPolicy }}
+              envFrom:
+                - secretRef:
+                    name: "{{ $.Values.secrets }}"              
+              env:
+                - name: BACKUP_ENABLED
+                  value: "{{ $.Values.vault.backup }}"
+                - name: RESTORE_ENABLED
+                  value: "{{ $.Values.vault.restore }}"
+                - name: MAIN_VAULT_ADDR
+                  value : "{{ $.Values.vault.addr.main }}"
+                - name: PRIMARY_VAULT_ADDR
+                  value : "{{ $.Values.vault.addr.primary }}"                    
+                - name: GCS_BUCKET
+                  value : "{{ $.Values.vault.gscBucket }}"
+              volumeMounts:
+{{ toYaml $.Values.volumeMounts | indent 14 }}
+              {{ end }}
+              resources:
+                limits:
+                  cpu: "{{ $cronjob.limits_cpu | default $.Values.resources.limits.cpu }}"
+                  memory: "{{ $cronjob.limits_cpu | default $.Values.resources.limits.memory }}"
+                requests:
+                  cpu: "{{ $cronjob.limits_cpu | default $.Values.resources.requests.cpu }}"
+                  memory: "{{ $cronjob.limits_cpu | default $.Values.resources.requests.memory }}"
+          {{- if $.Values.volumes }}
+          volumes:
+{{ toYaml $.Values.volumes | indent 10 }}
+          {{- end }}

@@ -1,0 +1,45 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+environment:
+
+concurrencyPolicy: Forbid
+startingDeadlineSeconds: 200
+successfulJobsHistoryLimit: 3
+
+image:
+  repository: gcr.io/alexishr-images/alexis-master-image/alexis-vault_backup_restore
+  tag: master
+  pullPolicy: Always
+
+resources:
+  limits:
+    cpu:
+    memory:
+  requests:
+    cpu: 1000m
+    memory: 2000Mi
+
+volumes:
+  - name: vault-secrets
+    mountPath: /tmp/
+
+volumeMounts:
+  - name: vault-secrets
+    secret:
+      secretName: vault-backup-secrets
+
+secrets: backup-secrets
+
+vault:
+  backup: "true"
+  restore: "false"
+  gscBucket: 
+  addr:
+    main: https://vault.internal-alexishr.com
+    primary:
+
+schedule: "0 8,20 * * *"
+
+spotTolerant: false
+nodeSelector:
+  env: production

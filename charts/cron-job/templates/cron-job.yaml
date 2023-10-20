@@ -1,14 +1,18 @@
+{{- range $cronjob := $.Values.cronjobs }}
+
+---
+
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: "{{ .Release.Name }}-cj"
+  name: "{{ lower $cronjob.id }}"
   labels:
-    chart: '{{ .Release.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+    cronjob: "{{ $cronjob.id }}"
 spec:
-  schedule: "{{ .Values.schedule }}"
-  concurrencyPolicy: {{ .Values.concurrencyPolicy }}
-  startingDeadlineSeconds: {{ .Values.startingDeadlineSeconds }}
-  successfulJobsHistoryLimit: {{ .Values.successfulJobsHistoryLimit }}
+  schedule: "{{ $cronjob.schedule | default $.Values.schedule }}"
+  concurrencyPolicy: {{ $cronjob.concurrencyPolicy | default $.Values.concurrencyPolicy }}
+  startingDeadlineSeconds: {{ $cronjob.startingDeadlineSeconds | default $.Values.startingDeadlineSeconds }}
+  successfulJobsHistoryLimit: {{ $cronjob.successfulJobsHistoryLimit | default $.Values.successfulJobsHistoryLimit }}
   jobTemplate:
     spec:
       backoffLimit: 3
@@ -18,42 +22,56 @@ spec:
             app.kubernetes.io/processType: cron-job
         spec:
           restartPolicy: "Never"
-          {{ if .Values.spotTolerant }}
+          {{ if $.Values.spotTolerant }}
           tolerations:
             - key: scheduling.cast.ai/spot
               operator: Exists
           {{ end }}
-          {{ if .Values.nodeSelector }}
+          {{ if $.Values.nodeSelector }}
           nodeSelector:
-{{ toYaml .Values.nodeSelector | indent 12 }}
+{{ toYaml $.Values.nodeSelector | indent 12 }}
           {{ end }}
           containers:
-            - name: {{ .Release.Name }}
-              image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-              imagePullPolicy: {{ .Values.image.pullPolicy }}
-              env:
-                - name: PROCESS_TYPE
-                  value : "cron-job"
+            - name: {{ lower $cronjob.id }}
+              image: "{{ $.Values.image.repository }}:{{ $.Values.image.tag }}"
+              imagePullPolicy: {{ $.Values.image.pullPolicy }}
               envFrom:
                 - configMapRef:
-                    name: "{{ .Values.config }}"
+                    name: "{{ $.Values.config }}"
                 - secretRef:
-                    name: "{{ .Values.secrets }}"
+                    name: "{{ $.Values.secrets }}"              
+              env:
+                - name: VAULT_ADDR
+                  value : "{{ $.Values.vaultArddr }}"
+                # - name: VAULT_TOKEN
+                #   value : "{{ $cronjob.vaultToken }}"
+                - name: VAULT_ROLE_NAME
+                  value : "{{ $.Values.vaultRole }}"                    
+                - name: NAMESPACE
+                  value : "{{ $.Values.appNamespace }}"
+                - name: APP_NAME
+                  value : "{{ $.Values.appName }}"
+                - name: COMMAND
+                  value : "{{ $cronjob.appCommand | default $.Values.appCommand  }}"
+                - name: PROCESS_TYPE
+                  value : "cron-job"
               command:
-                {{- range .Values.command }}
+                {{- range $.Values.command }}
                 - {{ . }} {{- end}}
-              {{ if .Values.volumeMounts }}
+              {{ if $.Values.volumeMounts }}
               volumeMounts:
-{{ toYaml .Values.volumeMounts | indent 14 }}
+{{ toYaml $.Values.volumeMounts | indent 14 }}
               {{ end }}
               resources:
                 limits:
-                  cpu: "{{ .Values.resources.limits.cpu }}"
-                  memory: "{{ .Values.resources.limits.memory }}"
+                  cpu: "{{ $cronjob.limits_cpu | default $.Values.resources.limits.cpu }}"
+                  memory: "{{ $cronjob.limits_cpu | default $.Values.resources.limits.memory }}"
                 requests:
-                  cpu: "{{ .Values.resources.requests.cpu }}"
-                  memory: "{{ .Values.resources.requests.memory }}"
-          {{- if .Values.volumes }}
+                  cpu: "{{ $cronjob.limits_cpu | default $.Values.resources.requests.cpu }}"
+                  memory: "{{ $cronjob.limits_cpu | default $.Values.resources.requests.memory }}"
+          {{- if $.Values.volumes }}
           volumes:
-{{ toYaml .Values.volumes | indent 10 }}
+{{ toYaml $.Values.volumes | indent 10 }}
           {{- end }}
+
+{{- end }}

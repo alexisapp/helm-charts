@@ -338,6 +338,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/microservice-2.0.0-alpha1/microservice-2.0.0-alpha1.tgz
     version: 2.0.0-alpha1
   - apiVersion: v1
+    created: "2023-10-24T16:01:36.457238462Z"
+    description: microservice
+    digest: 945506581024b631605557707b5d06d1dd8de55ff0761bb6f9f10161034f26ab
+    name: microservice
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-2.0.0-alpha.6/microservice-2.0.0-alpha.6.tgz
+    version: 2.0.0-alpha.6
+  - apiVersion: v1
     created: "2023-06-19T09:31:40.018289214Z"
     description: microservice
     digest: a033a9027c4fa6c3c7adff300f78f14f46c5ad770112f3f5b94af195ffaa08a7
@@ -629,4 +637,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2023-10-24T15:53:55.912089184Z"
+generated: "2023-10-24T16:01:36.45816957Z"

@@ -96,6 +96,7 @@ worker:
 
 migration:
   enabled: false
+  suspend: false
   command:
    - npm
    - run

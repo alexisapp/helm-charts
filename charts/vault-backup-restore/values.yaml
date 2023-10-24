@@ -21,12 +21,12 @@ resources:
 
 volumes:
   - name: vault-secrets
-    mountPath: /tmp/
+    secret:
+      secretName: vault-backup-secrets
 
 volumeMounts:
   - name: vault-secrets
-    secret:
-      secretName: vault-backup-secrets
+    mountPath: /tmp/
 
 secrets: backup-secrets
 

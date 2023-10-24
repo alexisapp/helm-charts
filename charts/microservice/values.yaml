@@ -105,6 +105,7 @@ worker:
 
 migration:
   enabled: false
+  suspend: false
   command:
    - sh
    - /entrypoint.sh

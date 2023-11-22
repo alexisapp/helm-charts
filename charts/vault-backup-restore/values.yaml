@@ -2,6 +2,8 @@
 # Declare variables to be passed into your templates.
 environment:
 
+suspend: false
+
 concurrencyPolicy: Forbid
 startingDeadlineSeconds: 200
 successfulJobsHistoryLimit: 3
@@ -16,8 +18,8 @@ resources:
     cpu:
     memory:
   requests:
-    cpu: 1000m
-    memory: 2000Mi
+    cpu: 500m
+    memory: 1000Mi
 
 volumes:
   - name: vault-secrets
@@ -35,10 +37,11 @@ serviceaccount: backup
 vault:
   backup: "true"
   restore: "false"
-  gscBucket: 
+  restoreFromS3: "false"
+  gcsBucket:
   addr:
     main: https://vault.internal-alexishr.com
-    primary:
+    primary: https://vault.sandbox-alexishr.com
 
 schedule: "0 8,20 * * *"
 

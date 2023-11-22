@@ -6,6 +6,7 @@ metadata:
     cronjob: "{{ .Release.Name }}"
 spec:
   schedule: "{{ $.Values.schedule }}"
+  suspend: {{ $.Values.suspend }}
   concurrencyPolicy: {{ $.Values.concurrencyPolicy }}
   startingDeadlineSeconds: {{ $.Values.startingDeadlineSeconds }}
   successfulJobsHistoryLimit: {{ $.Values.successfulJobsHistoryLimit }}
@@ -40,12 +41,14 @@ spec:
                   value: "{{ $.Values.vault.backup }}"
                 - name: RESTORE_ENABLED
                   value: "{{ $.Values.vault.restore }}"
+                - name: RESTORE_FROM_S3
+                  value: "{{ $.Values.vault.restoreFromS3 }}"
                 - name: MAIN_VAULT_ADDR
                   value : "{{ $.Values.vault.addr.main }}"
                 - name: PRIMARY_VAULT_ADDR
                   value : "{{ $.Values.vault.addr.primary }}"                    
                 - name: GCS_BUCKET
-                  value : "{{ $.Values.vault.gscBucket }}"
+                  value : "{{ $.Values.vault.gcsBucket }}"
               {{- if .Values.volumes }}
               volumeMounts:
 {{ toYaml $.Values.volumeMounts | indent 14 }}

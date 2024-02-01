@@ -1,7 +1,7 @@
 {{ if .Values.server.enabled }}
 {{ if .Values.server.pdb.enabled }}
 {{ if gt (int (toString (.Values.replicaCount))) 1 }}
-apiVersion: policy/v1beta1
+apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:
   name: "{{ .Release.Name }}-server-deployment-pdb"

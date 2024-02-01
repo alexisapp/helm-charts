@@ -34,6 +34,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/app-worker-2.0.0-alpha.1/app-worker-2.0.0-alpha.1.tgz
     version: 2.0.0-alpha.1
   - apiVersion: v1
+    created: "2024-02-01T13:26:51.637443563Z"
+    description: app-worker
+    digest: 0bbe06d02951e34b0f4820ac835a267e2a8e75eb039c3e409d90db44893acca0
+    name: app-worker
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/app-worker-1.1.0-beta.2/app-worker-1.1.0-beta.2.tgz
+    version: 1.1.0-beta.2
+  - apiVersion: v1
     created: "2022-05-05T10:10:05.35501371Z"
     description: app-worker
     digest: 75b0e7bd553c0d17b01c5998ddb1b41a6df178df955a371bae4fc584a1e4b63b
@@ -378,6 +386,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/microservice-2.0.0-alpha.2/microservice-2.0.0-alpha.2.tgz
     version: 2.0.0-alpha.2
   - apiVersion: v1
+    created: "2024-02-01T13:26:51.742447929Z"
+    description: microservice
+    digest: 18e4c7c84cf1f1f822e6371df5a333e858a5ea6ad9a77866871a7fcf7b033b02
+    name: microservice
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-1.1.0-beta.14/microservice-1.1.0-beta.14.tgz
+    version: 1.1.0-beta.14
+  - apiVersion: v1
     created: "2023-10-24T15:53:55.911484261Z"
     description: microservice
     digest: 754ad9a7c9c16fd25050561f7e62f3f39b445fbbd74fd6c1a43f0043a8f8fb05
@@ -645,4 +661,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2023-11-22T14:38:54.980597625Z"
+generated: "2024-02-01T13:26:51.742987894Z"

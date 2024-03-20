@@ -5,9 +5,9 @@ metadata:
   name: "{{ .Release.Name }}-worker-hpa-policy"
 spec:
   scaleTargetRef:
-    apiVersion: apps/v1beta1
+    apiVersion: apps/v1
     kind: Deployment
-    name: "{{ .Release.Name }}-worker-deployment"
+    name: "{{ .Release.Name }}-deployment"
   minReplicas: {{ .Values.worker.hpa.minReplicas }}
   maxReplicas: {{ .Values.worker.hpa.maxReplicas }}
   metrics:

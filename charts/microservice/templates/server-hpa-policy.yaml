@@ -5,9 +5,9 @@ metadata:
   name: "{{ .Release.Name }}-server-hpa-policy"
 spec:
   scaleTargetRef:
-    apiVersion: apps/v1beta1
+    apiVersion: apps/v1
     kind: Deployment
-    name: "{{ .Release.Name }}-server-deployment"
+    name: "{{ .Release.Name }}-deployment"
   minReplicas: {{ .Values.server.hpa.minReplicas }}
   maxReplicas: {{ .Values.server.hpa.maxReplicas }}
   metrics:

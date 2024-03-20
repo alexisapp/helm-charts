@@ -2,6 +2,14 @@ apiVersion: v1
 entries:
   app-worker:
   - apiVersion: v1
+    created: "2024-03-20T14:38:24.11231143Z"
+    description: app-worker
+    digest: d1bd33c25909e4a67fa7898b7844ecbf242b7782caaf08042c556940adb77797
+    name: app-worker
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/app-worker-2.0.0-alpha.9/app-worker-2.0.0-alpha.9.tgz
+    version: 2.0.0-alpha.9
+  - apiVersion: v1
     created: "2024-03-20T12:33:41.99986819Z"
     description: app-worker
     digest: 907a19e2919a240af6c55634a54db4f693d94dedbc4b82915d23f859b5fde7c2
@@ -313,6 +321,18 @@ entries:
     version: 0.10.1
   - apiVersion: v2
     appVersion: 2.276.1-20.04-1
+    created: "2024-03-20T14:38:24.291122179Z"
+    description: 'Deploys a StatefulSet of [GitHub Actions self-hosted runners](https://github.com/actions/runner)—
+      allowing you to run your [GitHub Actions](https://github.com/features/actions)
+      workflows on your own infrastructure. '
+    digest: 443b39af2ac95bb6f25be9dfa36cd86da0fd9c7da0ffeeea72a0eed1d2611290
+    name: github-actions-runner
+    type: application
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/github-actions-runner-0.10.1-5/github-actions-runner-0.10.1-5.tgz
+    version: 0.10.1-5
+  - apiVersion: v2
+    appVersion: 2.276.1-20.04-1
     created: "2024-03-20T12:37:58.984332505Z"
     description: 'Deploys a StatefulSet of [GitHub Actions self-hosted runners](https://github.com/actions/runner)—
       allowing you to run your [GitHub Actions](https://github.com/features/actions)
@@ -413,6 +433,14 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/microservice-2.0.0-alpha1/microservice-2.0.0-alpha1.tgz
     version: 2.0.0-alpha1
+  - apiVersion: v1
+    created: "2024-03-20T14:38:24.506945911Z"
+    description: microservice
+    digest: 67070ca072d1ce4efeba3e134ce0268aa6c09634fc510f8214720a2e06236d50
+    name: microservice
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-2.0.0-alpha.12/microservice-2.0.0-alpha.12.tgz
+    version: 2.0.0-alpha.12
   - apiVersion: v1
     created: "2024-03-20T12:54:24.540065235Z"
     description: microservice
@@ -769,4 +797,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2024-03-20T12:54:24.540934337Z"
+generated: "2024-03-20T14:38:24.507605184Z"

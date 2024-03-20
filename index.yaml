@@ -297,6 +297,18 @@ entries:
     version: 0.10.1
   - apiVersion: v2
     appVersion: 2.276.1-20.04-1
+    created: "2024-03-20T12:07:15.180779622Z"
+    description: 'Deploys a StatefulSet of [GitHub Actions self-hosted runners](https://github.com/actions/runner)—
+      allowing you to run your [GitHub Actions](https://github.com/features/actions)
+      workflows on your own infrastructure. '
+    digest: 904a57da3b01296df09645009ddda62fbe4154fd50393ff421ea6a88e6d829af
+    name: github-actions-runner
+    type: application
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/github-actions-runner-0.10.1-2/github-actions-runner-0.10.1-2.tgz
+    version: 0.10.1-2
+  - apiVersion: v2
+    appVersion: 2.276.1-20.04-1
     created: "2021-03-22T15:29:38.964784744Z"
     description: 'Deploys a StatefulSet of [GitHub Actions self-hosted runners](https://github.com/actions/runner)—
       allowing you to run your [GitHub Actions](https://github.com/features/actions)
@@ -693,4 +705,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2024-02-01T14:29:42.970188978Z"
+generated: "2024-03-20T12:07:15.181240602Z"

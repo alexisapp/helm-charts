@@ -13,18 +13,19 @@ image:
   repository: eu.gcr.io/alexishr-infra/alexis-microservice
   tag: master
   pullPolicy: Always
-  readinessProbe:
-    httpGet:
-      path: /readiness
-      port: 4000
-    initialDelaySeconds: 5
-    periodSeconds: 5
-  livenessProbe:
-    httpGet:
-      path: /liveness
-      port: 4000
-    initialDelaySeconds: 30
-    periodSeconds: 10
+
+readinessProbe:
+  httpGet:
+    path: /readiness
+    port: 4000
+  initialDelaySeconds: 5
+  periodSeconds: 5
+livenessProbe:
+  httpGet:
+    path: /liveness
+    port: 4000
+  initialDelaySeconds: 30
+  periodSeconds: 10
 
 worker:
   enabled: false

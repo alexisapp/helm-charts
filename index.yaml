@@ -66,6 +66,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/app-worker-2.0.0-alpha.1/app-worker-2.0.0-alpha.1.tgz
     version: 2.0.0-alpha.1
   - apiVersion: v1
+    created: "2024-03-23T12:51:22.854663085Z"
+    description: app-worker
+    digest: 162b340b961a75f0a47b1cbd930457e26f2b8555e42c538095dc187faafdff60
+    name: app-worker
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/app-worker-1.1.0-beta.6/app-worker-1.1.0-beta.6.tgz
+    version: 1.1.0-beta.6
+  - apiVersion: v1
     created: "2024-03-20T12:37:58.799876326Z"
     description: app-worker
     digest: 64a74482b926633ebfac946c67aa465aa1cf0b613e3f7c650c8a4015358ab82e
@@ -813,4 +821,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2024-03-21T11:29:27.897113158Z"
+generated: "2024-03-23T12:51:22.855249448Z"

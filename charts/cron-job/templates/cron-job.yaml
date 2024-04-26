@@ -1,6 +1,6 @@
-{{- range $cronjob := $.Values.cronjobs }}
+# {{- range $cronjob := $.Values.cronjobs }}
 
----
+# ---
 
 apiVersion: batch/v1
 kind: CronJob

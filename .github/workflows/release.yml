@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - PE-150
+      - PE-150-cj-chart-testing
 
 jobs:
   release:

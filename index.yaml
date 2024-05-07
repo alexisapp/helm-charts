@@ -2,6 +2,14 @@ apiVersion: v1
 entries:
   app-worker:
   - apiVersion: v1
+    created: "2024-05-07T15:20:41.311868675Z"
+    description: app-worker
+    digest: 991659e8acd6f5838b9061bc391343a03ece8ef3115b71d177c680d99eb5e6be
+    name: app-worker
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/app-worker-2.0.0-alpha.12/app-worker-2.0.0-alpha.12.tgz
+    version: 2.0.0-alpha.12
+  - apiVersion: v1
     created: "2024-05-07T10:35:27.845472112Z"
     description: app-worker
     digest: f46da0ea127205b468690b107640d2097968ef3f336404a5017e72d633ada7a2
@@ -162,6 +170,14 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/cron-job-2.0.0-beta.1/cron-job-2.0.0-beta.1.tgz
     version: 2.0.0-beta.1
+  - apiVersion: v1
+    created: "2024-05-07T15:20:41.44340628Z"
+    description: cron-job
+    digest: 0816815919f662c9eff339386a4f950569aff2038f75177cc0299cdd159b3440
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-2.0.0-alpha.13/cron-job-2.0.0-alpha.13.tgz
+    version: 2.0.0-alpha.13
   - apiVersion: v1
     created: "2024-05-07T10:35:27.980142264Z"
     description: cron-job
@@ -869,4 +885,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2024-05-07T10:35:28.112640905Z"
+generated: "2024-05-07T15:20:41.444170828Z"

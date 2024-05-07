@@ -70,7 +70,9 @@ spec:
           # - name: VAULT_TOKEN
           #   value : "{{ .Values.vaultToken }}"
           - name: VAULT_ROLE_NAME
-            value : "{{ .Values.vaultRole }}"                    
+            value : "{{ .Values.vaultRole }}"
+          - name: K8S_AUTH
+            value: "{{ .Values.vaultK8sAuth }}"
           - name: NAMESPACE
             value : "{{ .Values.appNamespace }}"
           - name: APP_NAME

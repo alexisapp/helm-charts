@@ -18,6 +18,7 @@ appMigrationCommand: {}
 config: {}
 secrets: {}
 linkerd: false
+vaultK8sAuth: false
 
 image:
   repository: eu.gcr.io/alexishr-infra/alexis-microservice

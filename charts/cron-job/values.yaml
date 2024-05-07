@@ -9,6 +9,8 @@ concurrencyPolicy: Forbid
 startingDeadlineSeconds: 200
 successfulJobsHistoryLimit: 3
 
+vaultK8sAuth: false
+
 image:
   repository: eu.gcr.io/alexishr-infra/alexis-microservice
   tag: master

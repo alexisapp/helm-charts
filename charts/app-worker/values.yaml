@@ -6,6 +6,8 @@ containerPort: 4000
 
 environment: "staging"
 
+vaultK8sAuth: false
+
 # config: env-config
 # secrets: env-secrets
 

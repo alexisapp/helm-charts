@@ -3,7 +3,7 @@ name: Release Charts
 on:
   push:
     branches:
-      - PE-150
+      - PE-433-cj-chart-vault
 
 jobs:
   release:

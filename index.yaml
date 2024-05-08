@@ -171,6 +171,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/cron-job-2.0.0-beta.1/cron-job-2.0.0-beta.1.tgz
     version: 2.0.0-beta.1
   - apiVersion: v1
+    created: "2024-05-08T13:07:59.460518358Z"
+    description: cron-job
+    digest: a5d748974b20b80096c3b9743a9f4354f7dbe1d864ce86bfceee06a5bfbb1eb2
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-2.0.0-beta.0/cron-job-2.0.0-beta.0.tgz
+    version: 2.0.0-beta.0
+  - apiVersion: v1
     created: "2024-05-07T15:20:41.44340628Z"
     description: cron-job
     digest: 0816815919f662c9eff339386a4f950569aff2038f75177cc0299cdd159b3440
@@ -885,4 +893,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2024-05-07T15:20:41.444170828Z"
+generated: "2024-05-08T13:07:59.461222649Z"

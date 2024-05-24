@@ -2,6 +2,14 @@ apiVersion: v1
 entries:
   app-worker:
   - apiVersion: v1
+    created: "2024-05-24T13:35:30.069328316Z"
+    description: app-worker
+    digest: be4333b1af26fa7fb66df4baba4ca185d7c06585d6c8c67929f4814b5f3fa839
+    name: app-worker
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/app-worker-2.0.0/app-worker-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v1
     created: "2024-05-24T12:23:39.749046957Z"
     description: app-worker
     digest: 7ab1c3f06786788bdd8880f8f23cb681a438fefe7600fc31235cb86e9c2f26aa
@@ -162,6 +170,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/app-worker-1.0.0/app-worker-1.0.0.tgz
     version: 1.0.0
   cron-job:
+  - apiVersion: v1
+    created: "2024-05-24T13:35:30.185054791Z"
+    description: cron-job
+    digest: 3438f77a4d24c47d894e256c8e12a323efce47bad86eea21a5db9bf27186be76
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-2.0.0/cron-job-2.0.0.tgz
+    version: 2.0.0
   - apiVersion: v1
     created: "2024-05-24T12:23:39.861404119Z"
     description: cron-job
@@ -417,6 +433,18 @@ entries:
     version: 0.10.1
   - apiVersion: v2
     appVersion: 2.276.1-20.04-1
+    created: "2024-05-24T13:35:30.292670396Z"
+    description: 'Deploys a StatefulSet of [GitHub Actions self-hosted runners](https://github.com/actions/runner)—
+      allowing you to run your [GitHub Actions](https://github.com/features/actions)
+      workflows on your own infrastructure. '
+    digest: de0349084a90058dbf3ccd6a5681179871cd769d73f03450cdb03d2e3776f397
+    name: github-actions-runner
+    type: application
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/github-actions-runner-0.10.1-8/github-actions-runner-0.10.1-8.tgz
+    version: 0.10.1-8
+  - apiVersion: v2
+    appVersion: 2.276.1-20.04-1
     created: "2024-03-20T14:38:24.291122179Z"
     description: 'Deploys a StatefulSet of [GitHub Actions self-hosted runners](https://github.com/actions/runner)—
       allowing you to run your [GitHub Actions](https://github.com/features/actions)
@@ -521,6 +549,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/linkerd-crds-1.4.0/linkerd-crds-1.4.0.tgz
     version: 1.4.0
   microservice:
+  - apiVersion: v1
+    created: "2024-05-24T13:35:30.449003836Z"
+    description: microservice
+    digest: d1be58d37c100abb3809b519da5bab30a038900923121cf553d535aaa5e306c2
+    name: microservice
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-2.0.0/microservice-2.0.0.tgz
+    version: 2.0.0
   - apiVersion: v1
     created: "2024-05-24T12:23:40.014193014Z"
     description: microservice
@@ -878,6 +914,14 @@ entries:
     version: 0.1.0
   vault-backup-restore:
   - apiVersion: v1
+    created: "2024-05-24T13:35:30.577922098Z"
+    description: cron-job
+    digest: 4e80f1e616d14d4f6b8268640d96141e0bb0223bb6d77e2ac57c47f167ef0084
+    name: vault-backup-restore
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-2.0.0/vault-backup-restore-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v1
     created: "2024-05-24T12:23:40.124598267Z"
     description: cron-job
     digest: cc55a62823c1a5759d34b0c9b1e971e6de53975caab79d3e52d26a7590ca0dec
@@ -925,4 +969,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2024-05-24T12:23:40.125673628Z"
+generated: "2024-05-24T13:35:30.580022392Z"

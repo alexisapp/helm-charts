@@ -6,4 +6,4 @@ description: |
   own infrastructure.
 name: github-actions-runner
 type: application
-version: 0.10.1-7
+version: 0.10.1-8

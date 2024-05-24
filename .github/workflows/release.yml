@@ -3,7 +3,8 @@ name: Release Charts
 on:
   push:
     branches:
-      - main
+      # - main
+      - PE-440-Vault-cj
 
 jobs:
   release:

@@ -4,6 +4,8 @@ environment:
 
 suspend: false
 
+vaultK8sAuth: false
+
 concurrencyPolicy: Forbid
 startingDeadlineSeconds: 200
 successfulJobsHistoryLimit: 3

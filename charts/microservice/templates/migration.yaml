@@ -28,6 +28,21 @@ spec:
                     name: "{{  .Release.Name }}-env-config"
                 - secretRef:
                     name: "{{  .Release.Name }}-env-secrets"
+              env:
+                - name: VAULT_ADDR
+                  value : "{{ .Values.vaultArddr }}"
+                # - name: VAULT_TOKEN
+                #   value : "{{ .Values.vaultToken }}"
+                - name: VAULT_ROLE_NAME
+                  value : "{{ .Values.vaultRole }}"
+                - name: K8S_AUTH
+                  value: "{{ .Values.vaultK8sAuth }}"
+                - name: NAMESPACE
+                  value : "{{ .Values.appNamespace }}"
+                - name: APP_NAME
+                  value : "{{ .Values.appName }}"
+                - name: COMMAND
+                  value : "{{ .Values.appMigrationCommand }}"
               command:
                 {{- range .Values.migration.command }}
                 - {{ . }} {{- end}}

@@ -31,14 +31,28 @@ spec:
             - name: {{ .Release.Name }}
               image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
               imagePullPolicy: {{ .Values.image.pullPolicy }}
-              env:
-                - name: PROCESS_TYPE
-                  value : "cron-job"
               envFrom:
                 - configMapRef:
                     name: "{{ .Values.config }}"
                 - secretRef:
-                    name: "{{ .Values.secrets }}"
+                    name: "{{ .Values.secrets }}"              
+              env:
+                - name: VAULT_ADDR
+                  value : "{{ .Values.vaultArddr }}"
+                # - name: VAULT_TOKEN
+                #   value : "{{ .Values.vaultToken }}"
+                - name: VAULT_ROLE_NAME
+                  value : "{{ .Values.vaultRole }}"
+                - name: K8S_AUTH
+                  value: "{{ .Values.vaultK8sAuth }}"
+                - name: NAMESPACE
+                  value : "{{ .Values.appNamespace }}"
+                - name: APP_NAME
+                  value : "{{ .Values.appName }}"
+                - name: COMMAND
+                  value : "{{ .Values.appCommand }}"              
+                - name: PROCESS_TYPE
+                  value : "cron-job"
               command:
                 {{- range .Values.command }}
                 - {{ . }} {{- end}}

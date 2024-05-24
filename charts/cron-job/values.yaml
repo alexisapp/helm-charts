@@ -2,12 +2,14 @@
 # Declare variables to be passed into your templates.
 environment: "staging"
 
-config: env-config
-secrets: env-secrets
+# config: env-config
+# secrets: env-secrets
 
 concurrencyPolicy: Forbid
 startingDeadlineSeconds: 200
 successfulJobsHistoryLimit: 3
+
+vaultK8sAuth: false
 
 image:
   repository: eu.gcr.io/alexishr-infra/alexis-microservice
@@ -27,9 +29,8 @@ volumeMounts: []
 
 schedule: "0 * * * *"
 command:
- - npm
- - run
- - replace-command
+- "sh"
+- "/entrypoint.sh"
 
 spotTolerant: false
 nodeSelector: false

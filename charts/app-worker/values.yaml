@@ -6,8 +6,10 @@ containerPort: 4000
 
 environment: "staging"
 
-config: env-config
-secrets: env-secrets
+vaultK8sAuth: false
+
+# config: env-config
+# secrets: env-secrets
 
 image:
   repository: eu.gcr.io/alexishr-infra/alexis-microservice
@@ -32,9 +34,8 @@ worker:
   nodeSelector: false
   spotTolerant: false
   command:
-   - npm
-   - run
-   - worker
+   - sh
+   - /entrypoint.sh
   replicaCount: 1
   strategy:
     type: RollingUpdate

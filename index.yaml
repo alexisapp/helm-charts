@@ -2,6 +2,14 @@ apiVersion: v1
 entries:
   app-worker:
   - apiVersion: v1
+    created: "2024-05-30T15:43:17.305763323Z"
+    description: app-worker
+    digest: 8cc92cbe9b8eee738aae2071b56c9dbeac1a5a6306e55174f84b6c2ec085b927
+    name: app-worker
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/app-worker-2.1.0/app-worker-2.1.0.tgz
+    version: 2.1.0
+  - apiVersion: v1
     created: "2024-05-24T13:35:30.069328316Z"
     description: app-worker
     digest: be4333b1af26fa7fb66df4baba4ca185d7c06585d6c8c67929f4814b5f3fa839
@@ -170,6 +178,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/app-worker-1.0.0/app-worker-1.0.0.tgz
     version: 1.0.0
   cron-job:
+  - apiVersion: v1
+    created: "2024-05-30T15:43:17.49287014Z"
+    description: cron-job
+    digest: 2eab02493557641ed4581ccfbadde510e8772f8f8fe1d22a7524f8612a099143
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-2.1.0/cron-job-2.1.0.tgz
+    version: 2.1.0
   - apiVersion: v1
     created: "2024-05-24T13:35:30.185054791Z"
     description: cron-job
@@ -549,6 +565,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/linkerd-crds-1.4.0/linkerd-crds-1.4.0.tgz
     version: 1.4.0
   microservice:
+  - apiVersion: v1
+    created: "2024-05-30T15:43:17.719878345Z"
+    description: microservice
+    digest: 92acf740140e2ffd402a015da411de44627dd4edf60ee5dd0daa4619e8de4ded
+    name: microservice
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-2.1.0/microservice-2.1.0.tgz
+    version: 2.1.0
   - apiVersion: v1
     created: "2024-05-24T13:35:30.449003836Z"
     description: microservice
@@ -969,4 +993,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2024-05-24T13:35:30.580022392Z"
+generated: "2024-05-30T15:43:17.720883751Z"

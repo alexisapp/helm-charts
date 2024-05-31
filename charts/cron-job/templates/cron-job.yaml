@@ -36,10 +36,14 @@ spec:
               image: "{{ $.Values.image.repository }}:{{ $.Values.image.tag }}"
               imagePullPolicy: {{ $.Values.image.pullPolicy }}
               envFrom:
+                {{- if $.Values.config }}
                 - configMapRef:
                     name: "{{ $.Values.config }}"
+                {{- end }}
+                {{- if $.Values.secrets }}
                 - secretRef:
-                    name: "{{ $.Values.secrets }}"              
+                    name: "{{ $.Values.secrets }}"
+                {{- end }}
               env:
                 - name: VAULT_ADDR
                   value : "{{ $.Values.vaultArddr }}"

@@ -2,6 +2,14 @@ apiVersion: v1
 entries:
   app-worker:
   - apiVersion: v1
+    created: "2024-06-06T15:16:35.185811112Z"
+    description: app-worker
+    digest: 6d7bbeb5d06048ba1334f737dc32af16cc623f68490e9a903b9d2927bca1816d
+    name: app-worker
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/app-worker-2.1.1/app-worker-2.1.1.tgz
+    version: 2.1.1
+  - apiVersion: v1
     created: "2024-05-30T15:43:17.305763323Z"
     description: app-worker
     digest: 8cc92cbe9b8eee738aae2071b56c9dbeac1a5a6306e55174f84b6c2ec085b927
@@ -178,6 +186,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/app-worker-1.0.0/app-worker-1.0.0.tgz
     version: 1.0.0
   cron-job:
+  - apiVersion: v1
+    created: "2024-06-06T15:16:35.368435865Z"
+    description: cron-job
+    digest: f5e369d9ff3e1ba176513072370c827f56e9acf12553ac1e9b9b56952c590fc4
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-2.1.1/cron-job-2.1.1.tgz
+    version: 2.1.1
   - apiVersion: v1
     created: "2024-05-30T15:43:17.49287014Z"
     description: cron-job
@@ -581,6 +597,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/linkerd-crds-1.4.0/linkerd-crds-1.4.0.tgz
     version: 1.4.0
   microservice:
+  - apiVersion: v1
+    created: "2024-06-06T15:16:35.554282571Z"
+    description: microservice
+    digest: f2165c2058a0a6e48731ac4ee6cfd735d048e7b204505f84b6b4a975eda6bd69
+    name: microservice
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-2.1.1/microservice-2.1.1.tgz
+    version: 2.1.1
   - apiVersion: v1
     created: "2024-05-30T15:43:17.719878345Z"
     description: microservice
@@ -1025,4 +1049,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2024-06-06T14:04:03.534619347Z"
+generated: "2024-06-06T15:16:35.556258612Z"

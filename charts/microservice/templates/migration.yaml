@@ -24,10 +24,14 @@ spec:
               image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
               imagePullPolicy: {{ .Values.image.pullPolicy }}
               envFrom:
+                {{- if and .Values.config (not (empty .Values.config)) }}
                 - configMapRef:
                     name: "{{  .Release.Name }}-env-config"
+                {{- end }}
+                {{- if and .Values.secrets (not (empty .Values.secrets)) }}
                 - secretRef:
                     name: "{{  .Release.Name }}-env-secrets"
+                {{- end }}
               env:
                 - name: VAULT_ADDR
                   value : "{{ .Values.vaultArddr }}"

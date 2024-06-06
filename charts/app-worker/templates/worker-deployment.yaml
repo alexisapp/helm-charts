@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "{{ .Release.Name }}-worker-deployment"
+  name: "{{ .Release.Name }}-deployment"
   labels:
     chart: '{{ .Release.Name }}-{{ .Chart.Version | replace "+" "_" }}'
 spec:
@@ -16,11 +16,11 @@ spec:
   revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}
   selector:
     matchLabels:
-      app: "{{ .Release.Name }}-worker-selector"
+      app: "{{ .Release.Name }}-selector"
   template:
     metadata:
       labels:
-        app: "{{ .Release.Name }}-worker-selector"
+        app: "{{ .Release.Name }}-selector"
         app.kubernetes.io/processType: worker
       annotations:
         checksum/config: {{ tpl (toYaml .Values.config) . | sha256sum }}
@@ -56,10 +56,14 @@ spec:
             cpu: "{{ .Values.worker.resources.requests.cpu }}"
             memory: "{{ .Values.worker.resources.requests.memory }}"
         envFrom:
+          {{- if and .Values.config (not (empty .Values.config)) }}
           - configMapRef:
               name: "{{ .Values.config }}"
+          {{- end }}
+          {{- if and .Values.secrets (not (empty .Values.secrets)) }}
           - secretRef:
               name: "{{ .Values.secrets }}"
+          {{- end }}
         env:
           - name: WORKER_PORT
             value : "{{ .Values.containerPort }}"

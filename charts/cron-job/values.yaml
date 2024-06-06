@@ -2,8 +2,8 @@
 # Declare variables to be passed into your templates.
 environment: "staging"
 
-config: {}
-secrets: {}
+# config: env-config
+# secrets: env-secrets
 
 concurrencyPolicy: Forbid
 startingDeadlineSeconds: 200

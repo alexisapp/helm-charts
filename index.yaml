@@ -187,6 +187,14 @@ entries:
     version: 1.0.0
   cron-job:
   - apiVersion: v1
+    created: "2024-06-25T14:11:18.781387622Z"
+    description: cron-job
+    digest: ec9807ceba5c30a6780d2c6e4375c851075dfeadf0cac63490c0bef294ef4335
+    name: cron-job
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/cron-job-2.2.0/cron-job-2.2.0.tgz
+    version: 2.2.0
+  - apiVersion: v1
     created: "2024-06-06T15:16:35.368435865Z"
     description: cron-job
     digest: f5e369d9ff3e1ba176513072370c827f56e9acf12553ac1e9b9b56952c590fc4
@@ -597,6 +605,14 @@ entries:
     - https://github.com/alexisapp/helm-charts/releases/download/linkerd-crds-1.4.0/linkerd-crds-1.4.0.tgz
     version: 1.4.0
   microservice:
+  - apiVersion: v1
+    created: "2024-06-25T14:11:18.934025471Z"
+    description: microservice
+    digest: df296b116182e77a332dbd6403a51480d6605b8dbfed02fffb69277ee625ec8d
+    name: microservice
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/microservice-2.2.0/microservice-2.2.0.tgz
+    version: 2.2.0
   - apiVersion: v1
     created: "2024-06-06T15:16:35.554282571Z"
     description: microservice
@@ -1049,4 +1065,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2024-06-06T15:16:35.556258612Z"
+generated: "2024-06-25T14:11:18.935339567Z"

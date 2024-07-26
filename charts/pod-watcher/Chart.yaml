@@ -1,0 +1,4 @@
+apiVersion: v2
+name: pod-watcher
+description: A Helm chart for pod-watcher
+version: 0.1.0

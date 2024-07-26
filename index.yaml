@@ -1008,6 +1008,15 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/partials-0.1.0/partials-0.1.0.tgz
     version: 0.1.0
+  pod-watcher:
+  - apiVersion: v2
+    created: "2024-07-26T10:02:59.507688099Z"
+    description: A Helm chart for pod-watcher
+    digest: 8627f6c23f22dc1d7e7d869683476eaa88d79ee5f22fe70ac1f5100ca25835b2
+    name: pod-watcher
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/pod-watcher-0.1.0/pod-watcher-0.1.0.tgz
+    version: 0.1.0
   vault-backup-restore:
   - apiVersion: v1
     created: "2024-05-24T13:35:30.577922098Z"
@@ -1065,4 +1074,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2024-06-25T14:11:18.935339567Z"
+generated: "2024-07-26T10:02:59.50804545Z"

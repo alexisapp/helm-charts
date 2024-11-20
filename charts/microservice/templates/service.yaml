@@ -9,8 +9,10 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-  - name: http  
-    port: {{ .Values.service.port }}
-    targetPort: {{ .Values.containerPort }}
+{{- range .Values.service.ports }}
+  - name: {{ .name }}
+    port: {{ .port }}
+    targetPort: {{ .containerPort }}
+{{- end }}
   selector:
     app: "{{  .Release.Name }}-server-selector"

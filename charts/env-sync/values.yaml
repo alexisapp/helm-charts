@@ -2,12 +2,12 @@
 # Declare variables to be passed into your templates.
 vaultAddr: "https://vault.internal-alexishr.com"
 vaultK8sAuth: true
-vaultRole: {{ .Environment.Name }}
-appNamespace: {{ .Environment.Name }}
+vaultRole: {}
+appNamespace: {}
 appName: "env-sync"
 appCommand: "/bin/bash -c ./backup-prod-files.sh"
 
-environment: {{ .Environment.Name }}
+environment: "test"
 
 secrets:
   name: ""

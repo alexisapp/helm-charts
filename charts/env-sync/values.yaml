@@ -1,0 +1,41 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+vaultAddr: "https://vault.internal-alexishr.com"
+vaultK8sAuth: true
+vaultRole: {{ .Environment.Name }}
+appNamespace: {{ .Environment.Name }}
+appName: "env-sync"
+appCommand: "/bin/bash -c ./backup-prod-files.sh"
+
+environment: {{ .Environment.Name }}
+
+secrets:
+  name: ""
+  data: {}
+google:
+  enabled: false
+  creds: xx
+
+concurrencyPolicy: Forbid
+successfulJobsHistoryLimit: 10
+
+image:
+  repository: europe-west1-docker.pkg.dev/alexishr-images/alexis-master-image/alexis-env-sync
+  tag: master
+  pullPolicy: Always
+
+# resources:
+#   limits:
+#     cpu: 500m
+#     memory: 1000Mi
+#   requests:
+#     cpu: 500m
+#     memory: 500Mi
+
+storage:
+  enabled: false
+  mountPath: /shared/upload
+  claimName: storage-claim
+
+suspend: true
+schedule: "0 * * * *"

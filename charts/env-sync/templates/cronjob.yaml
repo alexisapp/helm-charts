@@ -1,0 +1,69 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: "{{ .Release.Name }}"
+  labels:
+    chart: '{{ .Release.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+spec:
+  schedule: "{{ .Values.schedule }}"
+  suspend: {{ .Values.suspend }}
+  concurrencyPolicy: {{ .Values.concurrencyPolicy }}
+  successfulJobsHistoryLimit: {{ .Values.successfulJobsHistoryLimit }}
+  jobTemplate:
+    spec:
+      backoffLimit: 3
+      template:
+        spec:
+          restartPolicy: "Never"
+          nodeSelector:
+            env: "{{ .Values.environment }}"
+          containers:
+            - command:
+                - "sh"
+                - "/entrypoint.sh"
+              name: {{ .Release.Name }}
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+              imagePullPolicy: {{ .Values.image.pullPolicy }}
+              {{- if or .Values.secrets.data .Values.secrets.name }}
+              envFrom:
+                - secretRef:
+                    name: {{- if .Values.secrets.data }}
+                      {{ .Release.Name }}-secret
+                    {{- else }}
+                      {{ .Values.secrets.name }}
+                    {{- end }}
+              {{- end }}
+              env:
+                - name: VAULT_ADDR
+                  value : "{{ $.Values.vaultAddr }}"
+                - name: VAULT_ROLE_NAME
+                  value : "{{ $.Values.vaultRole }}"
+                - name: K8S_AUTH
+                  value: "{{ $.Values.vaultK8sAuth }}"
+                - name: NAMESPACE
+                  value : "{{ $.Values.appNamespace }}"
+                - name: APP_NAME
+                  value : "{{ $.Values.appName }}"
+                - name: COMMAND
+                  value : "{{ .Values.appCommand }}"
+              volumeMounts:
+              {{ if .Values.storage.enabled }}
+                - mountPath: {{ .Values.storage.mountPath }}
+                  name: storage
+              {{ end }}
+              {{ if .Values.google.enabled }}
+                - mountPath: /var/secrets/google
+                  name: google-creds
+              {{ end }}
+          volumes:
+            {{ if .Values.google.enabled }}
+            - name: google-creds
+              secret:
+                secretName: "{{ .Release.Name }}-google-creds"
+            {{ end }}
+            {{- if .Values.storage.enabled }}
+            - name: storage
+              persistentVolumeClaim:
+                claimName: "{{ .Values.storage.claimName }}"
+                readOnly: false
+            {{- end }}

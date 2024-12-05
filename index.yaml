@@ -474,6 +474,15 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/cron-job-1.0.0/cron-job-1.0.0.tgz
     version: 1.0.0
+  env-sync:
+  - apiVersion: v1
+    created: "2024-12-05T15:25:19.539382747Z"
+    description: cron-job
+    digest: 87c3f90123ef4cfbbdf7ec7e963be3c55d13dc01ec84d922641891aa355ef8c6
+    name: env-sync
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/env-sync-2.1.0/env-sync-2.1.0.tgz
+    version: 2.1.0
   github-actions-runner:
   - apiVersion: v2
     appVersion: 2.276.1-20.04-1
@@ -1082,4 +1091,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2024-11-20T13:35:10.808451273Z"
+generated: "2024-12-05T15:25:19.53974289Z"

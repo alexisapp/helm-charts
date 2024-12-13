@@ -474,6 +474,16 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/cron-job-1.0.0/cron-job-1.0.0.tgz
     version: 1.0.0
+  dns-crd:
+  - apiVersion: v1
+    created: "2024-12-13T10:35:31.488598372Z"
+    description: Helm Chart for managing custom CoreDNS ConfigMap
+    digest: d243ee2ad6b24b127f170ca1ee135f0f9ba1f94f28450e9f80202693023a53c5
+    name: dns-crd
+    type: application
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/dns-crd-1.0.1/dns-crd-1.0.1.tgz
+    version: 1.0.1
   env-sync:
   - apiVersion: v1
     created: "2024-12-05T15:25:19.539382747Z"
@@ -1091,4 +1101,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2024-12-05T15:25:19.53974289Z"
+generated: "2024-12-13T10:35:31.489595647Z"

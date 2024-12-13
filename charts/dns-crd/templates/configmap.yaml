@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Values.dnscrd.config.name }}
-  namespace: {{ .Values.dns-crd.config.namespace }}
+  namespace: {{ .Values.dnscrd.config.namespace }}
 data:
   {{ range $key, $value := .Values.dnscrd.config.data }}
   {{ $key }}: |

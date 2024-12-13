@@ -1,4 +1,6 @@
-{{- if .Values.dns-crd.enabled }}
+{{ if .Values.dns-crd.enabled }}
+
+---
 apiVersion: v1
 kind: ConfigMap
 metadata:

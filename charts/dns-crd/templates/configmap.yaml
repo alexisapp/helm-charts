@@ -1,10 +1,11 @@
+{{ if .Values.dnscrd.enabled }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Values.dns-crd.config.name }}
+  name: {{ .Values.dnscrd.config.name }}
   namespace: {{ .Values.dns-crd.config.namespace }}
 data:
-  {{ range $key, $value := .Values.dns-crd.config.data }}
+  {{ range $key, $value := .Values.dnscrd.config.data }}
   {{ $key }}: |
 {{ $value | indent 4 }}
   {{ end }}

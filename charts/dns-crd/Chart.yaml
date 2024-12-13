@@ -1,5 +1,4 @@
 apiVersion: v2
 name: dns-crd
 description: Helm Chart for managing custom CoreDNS ConfigMap
-type: application
-version: 1.0.3
+version: 1.0.4

@@ -476,6 +476,14 @@ entries:
     version: 1.0.0
   dns-crd:
   - apiVersion: v2
+    created: "2024-12-13T12:47:22.027502137Z"
+    description: Helm Chart for managing custom CoreDNS ConfigMap
+    digest: 77b85d0ffeb80e8251b296e3d32b33bf90eaea78026d5cecbb3705014dd37f7d
+    name: dns-crd
+    urls:
+    - https://github.com/alexisapp/helm-charts/releases/download/dns-crd-1.0.4/dns-crd-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
     created: "2024-12-13T12:03:35.864872483Z"
     description: Helm Chart for managing custom CoreDNS ConfigMap
     digest: 97cb0048e02522beb8852eb06980d890f0b9a369e46585410181318d44522114
@@ -1119,4 +1127,4 @@ entries:
     urls:
     - https://github.com/alexisapp/helm-charts/releases/download/vault-backup-restore-0.1.0-beta.1/vault-backup-restore-0.1.0-beta.1.tgz
     version: 0.1.0-beta.1
-generated: "2024-12-13T12:03:35.865184588Z"
+generated: "2024-12-13T12:47:22.027868862Z"
